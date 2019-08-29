@@ -12,19 +12,19 @@
      "datasets": [
          {
              "label": "librmb@CephFS",
-             "borderColor":"rgba(227, 26, 28, 0.6)",
+             "borderColor":"rgba(227, 26, 28, 0.8)",
              "fill": "false",
              "data": [84, 141, 209, 290, 425, 1191, 2765, 7670, 12804, 21062]
          },
          {
              "label": "librmb@LocalFS",
-             "borderColor":"rgba(51, 160, 44, 0.6)",
+             "borderColor":"rgba(51, 160, 44, 0.8)",
              "fill": "false",
              "data": [22, 21, 18, 29, 15, 19, 18, 27, 17, 21]
          },
          {
              "label": "NFS",
-             "borderColor":"rgba(166, 206, 227, 0.6)",
+             "borderColor":"rgba(166, 206, 227, 1.0)",
              "fill": "false",
              "data": [10, 7, 9, 7, 16, 12, 10, 12, 15, 13]
          }
@@ -95,14 +95,14 @@ Note:
      "labels": ["req_create_latency", "req_getfilelock_latency", "req_link_latency", "req_lookup_latency", "req_mkdir_latency"],
      "datasets": [
          {
-             "borderColor":"rgba(227, 26, 28, 0.6)",
-	     "backgroundColor": "rgba(227, 26, 28, 0.2)",
+             "borderColor":"rgba(227, 26, 28, 0.8)",
+	     "backgroundColor": "rgba(227, 26, 28, 0.5)",
              "label": "EC+Replication",
              "data": [361, 195, 269, 341, 1085]
          },
          {
-             "borderColor":"rgba(51, 160, 44, 0.6)",
-             "backgroundColor":"rgba(51, 160, 44, 0.2)",
+             "borderColor":"rgba(51, 160, 44, 0.8)",
+             "backgroundColor":"rgba(51, 160, 44, 0.5)",
              "label": "Replication (other cluster)",
              "data": [1.5, 0.35, 2.6, 0.6, 1.35]
          }
