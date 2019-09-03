@@ -74,6 +74,22 @@ Note:
 - chooseleaf: N == number of hosts to be picked in e.g. a FC
 
 
+<!-- .slide: data-state="normal" id="EC-2" data-timing="20s" data-menu-title="Erasure Coding Crush options" -->
+## EC - Pool settings
+
+### By default EC only allows full object writes/appends
+
+### Since Luminous partial writes supported
+
+### OSD read existing object, changes it, rewrites it
+
+### Enabled per pool:
+``ceph osd pool set ec_pool allow_ec_overwrites true``
+
+Note:
+- partial requires at least additional round trip for read plus additional CPU cycles for reconstruction
+
+
 <!-- .slide: data-state="normal" id="EC-3" data-timing="20s" data-menu-title="Cover" -->
 ## To Cover
 
