@@ -26,6 +26,65 @@ Note:
 
 <!-- Slide -->
 ##### Email Size Distribution
+<canvas data-chart="bar">
+<!--
+{
+ "data" : {
+     "labels": ["<1k", "<5k", "<10k", "<50k", "<100k", "<500k", "<1m", "<50m", "<100m", ">100m"],
+
+     "datasets": [
+         {
+             "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+             "backgroundColor": [
+                 "rgba(166, 206, 227, 0.6)",
+                 "rgba(31, 120, 180, 0.6)",
+                 "rgba(178, 223, 138, 0.6)",
+                 "rgba(51, 160, 44, 0.6)",
+                 "rgba(251, 154, 153, 0.6)",
+                 "rgba(227, 26, 28, 0.6)",
+                 "rgba(253, 191, 111, 0.6)",
+                 "rgba(255, 127, 0, 0.6)",
+                 "rgba(202, 178, 214, 0.6)"]
+         }
+     ]
+ },
+ "options": {
+     "animateScale": "true",
+     "responsive": "true",
+     "legend": {
+           "display": 0
+     },
+     "plugins": {
+         "datalabels": {
+             "align": "end",
+             "anchor": "end",
+             "display": 1
+         }
+     },
+     "scales": {
+         "yAxes": [{
+             "gridLines": {
+                 "color": "rgba(0, 0, 0, 0)"
+             },
+             "ticks": {
+                 "display": 0,
+		 "min": 356
+             },
+             "scaleLabel": {
+                 "display": 1,
+                 "labelString": "number of emails in million"
+             }
+         }],
+         "xAxes": [{
+             "gridLines": {
+                 "color": "rgba(0, 0, 0, 0)"
+             }
+         }]
+    }
+ }
+}
+-->
+</canvas>
 
 
 <!-- Slide -->
