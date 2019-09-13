@@ -7,15 +7,15 @@
 
 ### 5-node clusters (SUSE and DT's labs) <!-- .element: class="fragment" data-fragment-index="0" -->
 
-* <!-- .element: class="fragment" data-fragment-index="1" --> Functional IMAP testing against upstream dovecot
-  * <!-- .element: class="fragment" data-fragment-index="2" --> successful!
+### <!-- .element: class="fragment" data-fragment-index="1" --> Functional IMAP testing against upstream dovecot
+* <!-- .element: class="fragment" data-fragment-index="2" --> successful!
 
-* <!-- .element: class="fragment" data-fragment-index="3" --> Functional testing against DT's installation
-  * <!-- .element: class="fragment" data-fragment-index="4" --> successful!
+### <!-- .element: class="fragment" data-fragment-index="3" --> Functional testing against DT's installation
+* <!-- .element: class="fragment" data-fragment-index="4" --> successful!
 
-* <!-- .element: class="fragment" data-fragment-index="5" --> fixed issues on the way
+### <!-- .element: class="fragment" data-fragment-index="5" --> fixed issues on the way
 
-* <!-- .element: class="fragment" data-fragment-index="5" --> adapted imaptest version available
+### <!-- .element: class="fragment" data-fragment-index="5" --> adapted imaptest version available
 
 Note:
 - adapted imaptest to cover some testcases which are used in our setup

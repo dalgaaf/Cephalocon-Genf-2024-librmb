@@ -469,9 +469,7 @@ Note:
 ## Findings - Recovery Performance
 
 ### Alternatives
-
 * Move from HDD to SSD depending on TCO impact. <!-- .element: class="fragment" data-fragment-index="0" -->
-
 * Base code on dbox like format ? <!-- .element: class="fragment" data-fragment-index="1" -->
   * impact due to EC rewrite performance <!-- .element: class="fragment" data-fragment-index="2" -->
   * may add SSD pool to store boxes till full <!-- .element: class="fragment" data-fragment-index="3" -->
@@ -482,15 +480,15 @@ Note:
 <!-- .slide: data-state="normal" id="findings-4" data-timing="20s" data-menu-title="Findings - Performance" -->
 ## Findings - Operations
 
-* encryption didn't work out-of-the-box with SES5.5 <!-- .element: class="fragment" data-fragment-index="0" -->
-  * not all OSDs detected on boot due to timeout <!-- .element: class="fragment" data-fragment-index="1" -->
-  * fixed for SES6, workaround till then <!-- .element: class="fragment" data-fragment-index="1" -->
+### encryption didn't work out-of-the-box with SES5.5 <!-- .element: class="fragment" data-fragment-index="0" -->
+* not all OSDs detected on boot due to timeout <!-- .element: class="fragment" data-fragment-index="1" -->
+* fixed for SES6, workaround till then <!-- .element: class="fragment" data-fragment-index="1" -->
 
-* wipefs didn't fully work <!-- .element: class="fragment" data-fragment-index="2" -->
-  * reboot required <!-- .element: class="fragment" data-fragment-index="2" -->
+### wipefs didn't fully work <!-- .element: class="fragment" data-fragment-index="2" -->
+* reboot required <!-- .element: class="fragment" data-fragment-index="2" -->
 
 Note: 
-* wipefs: assume labels still somewhere in cache, may needed udev handling?
+- wipefs: assume labels still somewhere in cache, may needed udev handling?
 
 
 <!-- .slide: data-state="normal" id="findings-5" data-timing="20s" data-menu-title="Findings - Performance" -->

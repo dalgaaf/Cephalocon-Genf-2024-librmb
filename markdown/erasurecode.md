@@ -5,17 +5,17 @@
 <!-- .slide: data-state="normal" id="EC-0" data-timing="20s" data-menu-title="Replication vs EC" -->
 ## Options
 
-* Replication <!-- .element: class="fragment" data-fragment-index="0" -->
-  * copy each object n-times <!-- .element: class="fragment" data-fragment-index="0" -->
-  * at least 200% overhead (3x) <!-- .element: class="fragment" data-fragment-index="0" -->
-  * fast read <!-- .element: class="fragment" data-fragment-index="0" -->
-  * quicker recovery <!-- .element: class="fragment" data-fragment-index="0" -->
+### Replication <!-- .element: class="fragment" data-fragment-index="0" -->
+* copy each object n-times <!-- .element: class="fragment" data-fragment-index="0" -->
+* at least 200% overhead (3x) <!-- .element: class="fragment" data-fragment-index="0" -->
+* fast read <!-- .element: class="fragment" data-fragment-index="0" -->
+* quicker recovery <!-- .element: class="fragment" data-fragment-index="0" -->
 
-* Erasure Coding (EC) <!-- .element: class="fragment" data-fragment-index="1" -->
-  * one copy plus parity <!-- .element: class="fragment" data-fragment-index="1" -->
-  * space effective <!-- .element: class="fragment" data-fragment-index="1" -->
-  * performance impact on small objects <!-- .element: class="fragment" data-fragment-index="1" -->
-  * expensive recovery <!-- .element: class="fragment" data-fragment-index="1" -->
+### Erasure Coding (EC) <!-- .element: class="fragment" data-fragment-index="1" -->
+* one copy plus parity <!-- .element: class="fragment" data-fragment-index="1" -->
+* space effective <!-- .element: class="fragment" data-fragment-index="1" -->
+* performance impact on small objects <!-- .element: class="fragment" data-fragment-index="1" -->
+* expensive recovery <!-- .element: class="fragment" data-fragment-index="1" -->
 
 Note: 
 - read on replication faster due to fact that k objects need to read (latency, CPU)

@@ -57,15 +57,14 @@ Note:
 
 * <!-- .element: class="fragment" data-fragment-index="0" --> Lost of customer data __MUST__ be prevented at any cost 
 * At least replica 3 or comparable <!-- .element: class="fragment" data-fragment-index="1" -->
+* <!-- .element: class="fragment" data-fragment-index="2" --> Cluster __MUST__ be fully operational (R/W) in any scenario 
+* Applies to CephFS and Rados part <!-- .element: class="fragment" data-fragment-index="3" -->
 
-* <!-- .element: class="fragment" data-fragment-index="2" --> Failure scenarios to be covered: 
-  * <!-- .element: class="fragment" data-fragment-index="3" --> 1 of 3 fire compartments (FCs)
-  * <!-- .element: class="fragment" data-fragment-index="3" --> 1 FC + 1 Server (or HDD/SSD)
-  * <!-- .element: class="fragment" data-fragment-index="3" --> 1 FC + 1 Server + 1 HDD/SSD 
-
-* <!-- .element: class="fragment" data-fragment-index="4" --> Cluster __MUST__ be fully operational (R/W) in any scenario 
-* <!-- .element: class="fragment" data-fragment-index="5" --> Additonal failure __MUST__ not cause data loss
-* Applies to CephFS and Rados part <!-- .element: class="fragment" data-fragment-index="6" -->
+### <!-- .element: class="fragment" data-fragment-index="4" --> Failure scenarios to be covered: 
+* <!-- .element: class="fragment" data-fragment-index="5" --> 1 of 3 fire compartments (FCs)
+* <!-- .element: class="fragment" data-fragment-index="5" --> 1 FC + 1 Server (or HDD/SSD)
+* <!-- .element: class="fragment" data-fragment-index="5" --> 1 FC + 1 Server + 1 HDD/SSD 
+* <!-- .element: class="fragment" data-fragment-index="6" --> Additonal failure __MUST__ not cause data loss
 
 Note: 
 - additional error sets cluster in hold, no writes to the cluster any more, cause stop of mail system.
