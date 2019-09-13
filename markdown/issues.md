@@ -11,13 +11,13 @@
      "labels": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
      "datasets": [
          {
-             "label": "librmb@CephFS",
+             "label": "librmb@CephFS+Rados",
              "borderColor":"rgba(227, 26, 28, 0.8)",
              "fill": "false",
              "data": [84, 141, 209, 290, 425, 1191, 2765, 7670, 12804, 21062]
          },
          {
-             "label": "librmb@LocalFS",
+             "label": "librmb@LocalFS+Rados",
              "borderColor":"rgba(51, 160, 44, 0.8)",
              "fill": "false",
              "data": [22, 21, 18, 29, 15, 19, 18, 27, 17, 21]
@@ -59,7 +59,7 @@
              },
 	     "scaleLabel": {
 	        "display": 1,
-		"labelString": "ms/cmd avg"
+		"labelString": "log(ms/cmd avg)"
 	     },
              "ticks": {
 	         "min": 7,
@@ -81,9 +81,13 @@
 -->
 </canvas>
 
-Note: 
+Note:
 - Rados performance is okay
-- CephFS is the issue
+- CephFS is the issue, imaptest performance way to slow with EC
+- metadata/indexes o local HDD significant faster
+- Rados performance is okay
+- no signifcant load on OSDs/MDS
+- find with 3million files: 16sec, second run the same
 
 
 <!-- .slide: data-state="normal" id="findings-1" data-timing="20s" data-menu-title="Findings - Performance - mds" -->
@@ -163,28 +167,264 @@ Note:
 - CephFS replication cluster is on HDD
 
 
-<!-- .slide: data-state="normal" id="findings-2" data-timing="20s" data-menu-title="Findings - Performance" -->
+## Findings - Performance
+<canvas data-chart="line">
+<!--
+{
+ "data" : {
+     "labels": ["1", "2", "3", "4", "5"],
+     "datasets": [
+         {
+             "label": "3-rooms@CephFS",
+             "borderColor":"rgba(227, 26, 28, 0.5)",
+             "fill": "false",
+             "data": [84, 141, 209, 290, 425]
+         },
+         {
+             "label": "3-rooms@NFS+Rados",
+             "borderColor":"rgba(166, 206, 227, 0.7)",
+             "fill": "false",
+             "data": [21, 33, 28, 24, 29]
+         }
+     ]
+ },
+ "options": {
+     "fill": "false",
+     "animateScale": "true",
+     "responsive": "true",
+     "legend": {
+           "display": 1
+     },
+     "layout": {
+            "padding": {
+                "left": 20,
+                "right": 20,
+                "top": 40,
+                "bottom": 0
+            }
+     },
+     "plugins": {
+         "datalabels": {
+             "align": "end",
+             "anchor": "end"
+         }
+     },
+     "scales": {
+         "yAxes": [{
+	     "type": "logarithmic",
+             "gridLines": {
+                 "color": "rgba(0, 0, 0, 0)"
+             },
+	     "scaleLabel": {
+	        "display": 1,
+		"labelString": "log(ms/cmd avg)"
+	     },
+             "ticks": {
+	         "min": 7,
+                 "display": 0
+             }
+         }],
+         "xAxes": [{
+             "gridLines": {
+                 "color": "rgba(0, 0, 0, 0)"
+             },
+	     "scaleLabel": {
+	        "display": 1,
+		"labelString": "# of server running imaptest with 1500 clients each"
+	     }
+         }]
+     }
+ }
+}
+-->
+</canvas>
+
+
+## Findings - Performance
+<canvas data-chart="line">
+<!--
+{
+ "data" : {
+     "labels": ["1", "2", "3", "4", "5"],
+     "datasets": [
+         {
+             "label": "3-rooms@CephFS",
+             "borderColor":"rgba(227, 26, 28, 0.5)",
+             "fill": "false",
+             "data": [84, 141, 209, 290, 425]
+         },
+         {
+             "label": "3-rooms@NFS+Rados",
+             "borderColor":"rgba(166, 206, 227, 0.7)",
+             "fill": "false",
+             "data": [21, 33, 28, 24, 29]
+         },
+         {
+             "label": "1-room-A@CephFS",
+             "borderColor":"rgba(51, 160, 44, 1.0)",
+             "fill": "false",
+             "data": [8, 9, 11, 20, 33]
+         },
+         {
+             "label": "1-room-B@CephFS",
+             "borderColor":"rgba(255, 127, 0, 1.0)",
+             "fill": "false",
+             "data": [50, 56, 65, 223, 294]
+         }
+     ]
+ },
+ "options": {
+     "fill": "false",
+     "animateScale": "true",
+     "responsive": "true",
+     "legend": {
+           "display": 1
+     },
+     "layout": {
+            "padding": {
+                "left": 20,
+                "right": 20,
+                "top": 40,
+                "bottom": 0
+            }
+     },
+     "plugins": {
+         "datalabels": {
+             "align": "end",
+             "anchor": "end"
+         }
+     },
+     "scales": {
+         "yAxes": [{
+	     "type": "logarithmic",
+             "gridLines": {
+                 "color": "rgba(0, 0, 0, 0)"
+             },
+	     "scaleLabel": {
+	        "display": 1,
+		"labelString": "log(ms/cmd avg)"
+	     },
+             "ticks": {
+	         "min": 7,
+                 "display": 0
+             }
+         }],
+         "xAxes": [{
+             "gridLines": {
+                 "color": "rgba(0, 0, 0, 0)"
+             },
+	     "scaleLabel": {
+	        "display": 1,
+		"labelString": "# of server running imaptest with 1500 clients each"
+	     }
+         }]
+     }
+ }
+}
+-->
+</canvas>
+
+
 ## Findings - Performance
 
-### CephFS performance <!-- .element: class="fragment" data-fragment-index="0" -->
+### uneven performance between rooms
+### single room faster than multiple
+ * expected due to less network hops
+ * but higher load should be better served by more servers
 
-* imaptest performance way too slow with EC <!-- .element: class="fragment" data-fragment-index="1" -->
-  * metadata/indexes on local HDD significant faster <!-- .element: class="fragment" data-fragment-index="1" -->
+### root cause: network
+  * volatile number of retransmitts
+  * Switches discards packages
+  * 40G to 4x10G Breakout cables
+  * different firmware version on Intel NICs
 
-* find with 3m files need: <!-- .element: class="fragment" data-fragment-index="2" -->
-  * 16 sec <!-- .element: class="fragment" data-fragment-index="2" -->
-  * second run not faster <!-- .element: class="fragment" data-fragment-index="2" -->
 
-* no significant load on OSDs/MDS or the cluster <!-- .element: class="fragment" data-fragment-index="3" -->
-  * no error messages <!-- .element: class="fragment" data-fragment-index="3" -->
+## Findings - Performance Degradation
+
+<canvas data-chart="line">
+<!--
+{
+ "data" : {
+     "labels": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+     "datasets": [
+         {
+             "label": "MDS-A (re)start",
+             "borderColor":"rgba(227, 26, 28, 0.8)",
+             "fill": "false",
+             "data": [8, 9, 21, 48, 97, 147, 165, 210, 261, 295]
+         },
+         {
+             "label": "MDS-A next morning",
+             "borderColor":"rgba(51, 160, 44, 0.8)",
+             "fill": "false",
+             "data": [112, 179, 444, 535, 785, 991, 1206, 979, 1755, 1521]
+         }
+     ]
+ },
+ "options": {
+     "fill": "false",
+     "animateScale": "true",
+     "responsive": "true",
+     "legend": {
+           "display": 1
+     },
+     "layout": {
+            "padding": {
+                "left": 20,
+                "right": 20,
+                "top": 40,
+                "bottom": 0
+            }
+     },
+     "plugins": {
+         "datalabels": {
+             "align": "end",
+             "anchor": "end"
+         }
+     },
+     "scales": {
+         "yAxes": [{
+	     "type": "logarithmic",
+             "gridLines": {
+                 "color": "rgba(0, 0, 0, 0)"
+             },
+	     "scaleLabel": {
+	        "display": 1,
+		"labelString": "log(ms/cmd avg)"
+	     },
+             "ticks": {
+	         "min": 7,
+                 "display": 0
+             }
+         }],
+         "xAxes": [{
+             "gridLines": {
+                 "color": "rgba(0, 0, 0, 0)"
+             },
+	     "scaleLabel": {
+	        "display": 1,
+		"labelString": "# of server running imaptest with 1500 clients each"
+	     }
+         }]
+     }
+ }
+}
+-->
+</canvas>
+
+
+## Findings - Performance Degradation
+
+* restart of MDS helps
+* switching to another MDS improves performance
+* drop of caches doesn't help
+* expected to (may) be gone with SES 6.0
 
 
 <!-- .slide: data-state="normal" id="findings-3" data-timing="20s" data-menu-title="Findings - Performance" -->
 ## Findings - Performance
 
 ### CephFS Troubleshooting <!-- .element: class="fragment" data-fragment-index="0" -->
-* issue is no general issue, it's an issue in this cluster! <!-- .element: class="fragment" data-fragment-index="0" -->
-* no obvious issues in network <!-- .element: class="fragment" data-fragment-index="1" -->
 * multi-active MDS <!-- .element: class="fragment" data-fragment-index="2" -->
   * no relevant improvement <!-- .element: class="fragment" data-fragment-index="2" -->
 * too low number of PGs by default <!-- .element: class="fragment" data-fragment-index="3" -->
@@ -194,8 +434,21 @@ Note:
 * cephfs_metadata pool set from 6x to 3x <!-- .element: class="fragment" data-fragment-index="5" -->
   * no significant improvement! <!-- .element: class="fragment" data-fragment-index="5" -->
 
-Note: 
-- next steps: move to replication
+
+## Findings - Partial Rewrite Performance
+
+* Dovecot behaviour on index/cache/log files:
+  * cause small changes/adds on these files
+  * requires partial rewrites
+
+* Partial rewrite changes:
+  * fully read file from the OSDs
+  * change file
+  * recalculate chunks
+  * rewrite to cluster
+  * -> at least read+write 
+
+* high impact on performance
 
 
 <!-- .slide: data-state="normal" id="findings-3.1" data-timing="20s" data-menu-title="Findings - Performance" -->
