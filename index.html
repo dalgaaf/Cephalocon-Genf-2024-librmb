@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/reveal-override.css"/>
 
     <!-- For syntax highlighting -->
-    <link rel="stylesheet" href="highlight.js/src/styles/github.css" />
+    <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css" />
 
     <!-- For JavaScript-generated QR codes -->
     <link rel="stylesheet" href="css/qrcode.css" />
@@ -154,12 +154,6 @@ Reveal.initialize({
          38: 'prev'
     },
 
-    multiplex: {
-        secret: null,
-        id: 'insert-id-here',
-        url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh'
-    },
-
     // Optional libraries used to extend on reveal.js
     dependencies: [
         { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
@@ -168,8 +162,6 @@ Reveal.initialize({
         { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
         { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
         { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-        { src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
-        { src: 'reveal.js/plugin/multiplex/client.js', async: true },
         { src: 'reveal.js-plugins/menu/menu.js', async: true, condition: function() { return !!document.body.classList; } },
         { src: 'reveal.js-plugins/chart/Chart.min.js' },
         { src: 'reveal.js-plugins/chart/chartjs-plugin-datalabels.min.js' },
