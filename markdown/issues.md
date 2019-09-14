@@ -327,16 +327,16 @@ Note:
 
 ## Findings - Performance
 
-### uneven performance between rooms
-### single room faster than multiple
- * expected due to less network hops
- * but higher load should be better served by more servers
+### uneven performance between rooms <!-- .element: class="fragment" data-fragment-index="0" -->
+### single room faster than multiple <!-- .element: class="fragment" data-fragment-index="1" -->
+ * expected due to less network hops <!-- .element: class="fragment" data-fragment-index="2" -->
+ * but higher load should be better served by more servers <!-- .element: class="fragment" data-fragment-index="2" -->
 
-### root cause: network
-  * volatile number of retransmitts
-  * Switches discards packages
-  * 40G to 4x10G Breakout cables
-  * different firmware version on Intel NICs
+### root cause: network <!-- .element: class="fragment" data-fragment-index="3" -->
+  * volatile number of retransmitts <!-- .element: class="fragment" data-fragment-index="4" -->
+  * Switches discards packages <!-- .element: class="fragment" data-fragment-index="4" -->
+  * 40G to 4x10G Breakout cables caused trouble <!-- .element: class="fragment" data-fragment-index="5" -->
+  * different firmware version on Intel NICs <!-- .element: class="fragment" data-fragment-index="6" -->
 
 
 ## Findings - Performance Degradation
@@ -415,10 +415,10 @@ Note:
 
 ## Findings - Performance Degradation
 
-* restart of MDS helps
-* switching to another MDS improves performance
-* drop of caches doesn't help
-* expected to (may) be gone with SES 6.0
+* restart of MDS helps <!-- .element: class="fragment" data-fragment-index="0" -->
+* switching to another MDS improves performance <!-- .element: class="fragment" data-fragment-index="1" -->
+* drop of caches doesn't help <!-- .element: class="fragment" data-fragment-index="2" -->
+* expected to (may) be gone with SES 6.0 <!-- .element: class="fragment" data-fragment-index="3" -->
 
 
 <!-- .slide: data-state="normal" id="findings-3" data-timing="20s" data-menu-title="Findings - Performance" -->
