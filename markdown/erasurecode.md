@@ -74,7 +74,7 @@ Note:
 - chooseleaf: N == number of hosts to be picked in e.g. a FC
 
 
-<!-- .slide: data-state="normal" id="EC-2" data-timing="20s" data-menu-title="Erasure Coding Crush options" -->
+<!-- .slide: data-state="normal" id="EC-3" data-timing="20s" data-menu-title="Erasure Coding Crush options" -->
 ## EC - Pool settings
 
 ### By default EC only allows full object writes/appends
@@ -90,7 +90,7 @@ Note:
 - partial requires at least additional round trip for read plus additional CPU cycles for reconstruction
 
 
-<!-- .slide: data-state="normal" id="EC-3" data-timing="20s" data-menu-title="Cover" -->
+<!-- .slide: data-state="normal" id="EC-4" data-timing="20s" data-menu-title="Cover" -->
 ## To Cover
 
 ### 3 (+1) failures
@@ -112,8 +112,7 @@ Note:
 - Uneven distribution makes behaviour in error case unpredictable
 
 
-
-<!-- .slide: data-state="normal" id="EC-4" data-timing="20s" data-menu-title="Rados - 2 FCs - failures" -->
+<!-- .slide: data-state="normal" id="EC-5" data-timing="20s" data-menu-title="Rados - 2 FCs - failures" -->
 ## Rados Pool
 
 ### Failure Scenarios - 2 FCs
@@ -178,7 +177,7 @@ Note:
 - k3m7: 2 server left for recovery with min_size=k
 
 
-<!-- .slide: data-state="normal" id="EC-5" data-timing="20s" data-menu-title="Rados - 3 FCs" -->
+<!-- .slide: data-state="normal" id="EC-6" data-timing="20s" data-menu-title="Rados - 3 FCs" -->
 ## Rados Pool
 
 ### Failure Scenarios - 3 FCs
@@ -241,7 +240,7 @@ Note:
 - k4m8 and k6m6 need more than 12 server, otherwise in testing no recovery
 
 
-<!-- .slide: data-state="normal" id="EC-6" data-timing="20s" data-menu-title="CephFS Pool" -->
+<!-- .slide: data-state="normal" id="EC-7" data-timing="20s" data-menu-title="CephFS Pool" -->
 ## CephFS Pools
 
 ### Already 3 FCs, limited set of servers
@@ -256,7 +255,7 @@ Note:
 - only 9 SSD server available, in Production max. 15-18
 
 
-<!-- .slide: data-state="normal" id="EC-7" data-timing="20s" data-menu-title="CephFS Pool - Failues" -->
+<!-- .slide: data-state="normal" id="EC-8" data-timing="20s" data-menu-title="CephFS Pool - Failues" -->
 ## CephFS Pools
 
 ### Failure Scenarios - 3 FCs
@@ -318,7 +317,7 @@ Note:
 - more server needed in production
 
 
-<!-- .slide: data-state="normal" id="EC-8" data-timing="20s" data-menu-title="Space Overhead" -->
+<!-- .slide: data-state="normal" id="EC-9" data-timing="20s" data-menu-title="Space Overhead" -->
 ## Space Overhead
 <canvas data-chart="bar">
 <!--
@@ -384,7 +383,7 @@ Note:
 </canvas>
 
 
-<!-- .slide: data-state="normal" id="EC-9" data-timing="20s" data-menu-title="Cluster settings" -->
+<!-- .slide: data-state="normal" id="EC-10" data-timing="20s" data-menu-title="Cluster settings" -->
 ## Settings
 
 ### Rados <!-- .element: class="fragment" data-fragment-index="0" -->
