@@ -1,11 +1,12 @@
 <!-- .slide: data-state="cover" id="cover-page" data-timing="20" -->
 <br>
-storage2day 2019 - Heidelberg
+<img src="images/OpenInfra_Days_-Turkey_Horizontal.png" style="height:60px;width:auto;margin:0px"><br>
+<font size="5">Istanbul 2020</font>
 <br>
 <br>
 <br>
-```
-librmb: Milliarden E-Mails in Ceph
+``` none
+librmb: Billions of emails in Ceph
 ```
 <br>
 <br>
