@@ -2,33 +2,8 @@
 # Placement
 
 
-<!-- .slide: data-state="normal" id="placement-0" data-timing="20s" data-menu-title="Data Center" -->
-## Data Center 
-
-### Former assumption <!-- .element: class="fragment" data-fragment-index="0" -->
-* Two independent fire compartments (FCs) <!-- .element: class="fragment" data-fragment-index="0" -->
-* May additional virtual FCs <!-- .element: class="fragment" data-fragment-index="0" -->
-
-### Updated <!-- .element: class="fragment" data-fragment-index="1" -->
-* Production will be placed in a new DC <!-- .element: class="fragment" data-fragment-index="1" -->
-* \>3 independent fire compartments <!-- .element: class="fragment" data-fragment-index="1" -->
-* Network will fit bandwidth requirements <!-- .element: class="fragment" data-fragment-index="1" -->
-
-Note: 
-- requirements adapted since the last presentation
-
-
 <!-- .slide: data-state="normal" id="placement-3" data-timing="20s" data-menu-title="3FCs" -->
 ### Current setup
-<div>
-  <center><img data-src="images/fc-ceph-EC+3xReplication-color.svg" style="width:75%"></center>
-</div>
-
-Note: current intermediate state
-
-
-<!-- .slide: data-state="normal" id="placement-3" data-timing="20s" data-menu-title="3FCs" -->
-### PoC Setup
 <div>
   <center><img data-src="images/fc-ceph-EC-color_white_v2.svg" style="width:75%"></center>
 </div>
@@ -50,7 +25,7 @@ Note:
 - 40 or 80G interconnect between FCs and to spine
 - interconnect must not reflect theoretical rack/FC bandwidth
 - L2 terminated in rack, L3 for rest
-
+- will be updated to 100G + may 25G to the Ceph nodes
 
 <!-- .slide: data-state="normal" id="placement-1" data-timing="20s" data-menu-title="Data safety" -->
 ## Requirements for Production

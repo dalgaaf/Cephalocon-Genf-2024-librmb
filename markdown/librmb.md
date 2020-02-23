@@ -164,11 +164,11 @@ NOTE: alternative - "rados -p rados_mail --all ls"; "for i in `rados -p rados_ma
 
 
 <!-- .slide: data-state="normal" id="ceph-version" data-timing="20s" data-menu-title="Ceph version" -->
-## Which minimum Ceph Release?
+## Which recommended Ceph Release?
 
 <div>
      <img style="width: 60%; left: 47%; position: absolute" alt="ceph luminous"
-          data-src="images/luminous_logo.png" />
+          data-src="images/ceph_nautilus_fixed.svg" />
 </div> <!-- .element: class="fragment" data-fragment-index="5" -->
 
 ### Required Features: <!-- .element: class="fragment" data-fragment-index="0" -->
@@ -178,10 +178,10 @@ NOTE: alternative - "rados -p rados_mail --all ls"; "for i in `rados -p rados_ma
 * <!-- .element: class="fragment" data-fragment-index="2" --> CephFS
   * <!-- .element: class="fragment" data-fragment-index="2" --> Multi-MDS
 * <!-- .element: class="fragment" data-fragment-index="3" --> Erasure coding
+* <!-- .element: class="fragment" data-fragment-index="3" --> High level of security
 
 ### Enterprise currently products used: <!-- .element: class="fragment" data-fragment-index="6" -->
-* <!-- .element: class="fragment" data-fragment-index="6" --> SES 5.5, SLES 12-SP3
-* <!-- .element: class="fragment" data-fragment-index="7" --> Target: SES 6, SLES 15-SP1 (Ceph Nautilus)
+* <!-- .element: class="fragment" data-fragment-index="6" --> SES 6, SLES 15-SP1
 
 Note:
-- Target for PoC is SES 6 based on Nautilus
+- minimum release is Ceph Luminous

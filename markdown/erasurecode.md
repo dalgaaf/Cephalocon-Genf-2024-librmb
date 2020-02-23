@@ -2,25 +2,6 @@
 # Data Distribution
 
 
-<!-- .slide: data-state="normal" id="EC-0" data-timing="20s" data-menu-title="Replication vs EC" -->
-## Options
-
-### Replication <!-- .element: class="fragment" data-fragment-index="0" -->
-* copy each object n-times <!-- .element: class="fragment" data-fragment-index="0" -->
-* at least 200% overhead (3x) <!-- .element: class="fragment" data-fragment-index="0" -->
-* fast read <!-- .element: class="fragment" data-fragment-index="0" -->
-* quicker recovery <!-- .element: class="fragment" data-fragment-index="0" -->
-
-### Erasure Coding (EC) <!-- .element: class="fragment" data-fragment-index="1" -->
-* one copy plus parity <!-- .element: class="fragment" data-fragment-index="1" -->
-* space effective <!-- .element: class="fragment" data-fragment-index="1" -->
-* performance impact on small objects <!-- .element: class="fragment" data-fragment-index="1" -->
-* expensive recovery <!-- .element: class="fragment" data-fragment-index="1" -->
-
-Note: 
-- read on replication faster due to fact that k objects need to read (latency, CPU)
-
-
 <!-- .slide: data-state="normal" id="EC-0.1" data-timing="20s" data-menu-title="Replication Diagram" -->
 ### Replication
 <div>
@@ -28,22 +9,31 @@ Note:
 </div>
 
 Note:
+- copy each object n-times
+- at least 200% overhead (3x)
+- fast read
+- quicker recovery
 
 
 <!-- .slide: data-state="normal" id="EC-0.2" data-timing="20s" data-menu-title="Erasure Coding Diagram" -->
-### Erasure Coding
+### Erasure Coding (EC)
 <div>
   <center><img data-src="images/ec_explained_extra.svg" style="width:65%"></center>
 </div>
 
 Note:
+- one copy plus parity
 - Object is split into *k* chunks
 - Additonal *m* coding chunks will be created (encoded)
 - chunks/shards will be distributed as defined in crush and erasure code profile
+- space effective
+- performance impact on small objects
+- expensive recovery
+- read on replication faster due to fact that k objects need to read (latency, CPU)
 
 
 <!-- .slide: data-state="normal" id="EC-1" data-timing="20s" data-menu-title="Jerasure Options" -->
-## Jerasure
+## EC - Jerasure
 
 ``k = {data chunks}``
 * number of chunks the object is cut into
@@ -95,86 +85,17 @@ Note:
 
 ### 3 (+1) failures
 
-### 2 and 3 FC
+### 3 FC
 
 ### Available hardware
 
-### comparable performance and behaviour 
-  * Test and PoC
-  * PoC and Production
+### comparable performance and behaviour for PoC and production
 
 ### Even distribution of chunks/copies over FCs
 
 Note:
 - 3+1 because next error must not cause data loss
-- Test is 2/3 FCs (Rados 6/6 server; CephFS 3/3/3)
-- PoC+Production is 3/3 FCs (Rados 6/6/6 server; CephFS 3/3/3), Production more server
 - Uneven distribution makes behaviour in error case unpredictable
-
-
-<!-- .slide: data-state="normal" id="EC-5" data-timing="20s" data-menu-title="Rados - 2 FCs - failures" -->
-## Rados Pool
-
-### Failure Scenarios - 2 FCs
-
-<table width="80%">
- <colgroup>
-      <col width="20%">
-      <col width="20%">
-      <col width="20%">
-      <col width="20%">
-      <col width="20%">
- </colgroup>
- <tr>
-     <th height="60"></th>
-     <th align="center">1 FC</th>
-     <th align="center">+1 Server</th>
-     <th align="center">+1 OSD</th>
-     <th align="center">min_size=k+1</th>
- </tr>
- <tr>
-     <th align="center" height="60">6x</th>
-     <td bgcolor="lightgreen"></td>
-     <td bgcolor="lightgreen"></td>
-     <td bgcolor="#ff9999"></td>
-     <td bgcolor="#ff9999"></td>
- </tr>
- <tr>
-     <th align="center" height="60">8x</th>
-     <td bgcolor="lightgreen"></td>
-     <td bgcolor="lightgreen"></td>
-     <td bgcolor="lightgreen"></td>
-     <td bgcolor="#ff9999"></td>
- </tr>
- <tr>
-     <th align="center" height="60">k2m4</th>
-     <td bgcolor="lightgreen"></td>
-     <td bgcolor="lightgreen"></td>
-     <td bgcolor="#ff9999"></td>
-     <td bgcolor="#ff9999"></td>
- </tr>
- <tr>
-     <th align="center" height="60">k4m8</th>
-     <td bgcolor="lightgreen"></td>
-     <td bgcolor="lightgreen"></td>
-     <td bgcolor="lightgreen"></td>
-     <td bgcolor="#ff9999"></td>
- </tr>
- <tr>
-     <th align="center" height="60">k3m7</th>
-     <td bgcolor="lightgreen"></td>
-     <td bgcolor="lightgreen"></td>
-     <td bgcolor="lightgreen"></td>
-     <td bgcolor="#ff9999"></td>
- </tr>
-</table>
-
-Note:
-- k+m should be something that can be devided by 2 to get even distribution
-- Replication no option, to expensive due to full copies
-- k4m8: all server in use -> no recovery
-- Issue with both: failure of a FC
-- k3m7: 2 server left for recovery with min_size=k
 
 
 <!-- .slide: data-state="normal" id="EC-6" data-timing="20s" data-menu-title="Rados - 3 FCs" -->
@@ -243,7 +164,7 @@ Note:
 <!-- .slide: data-state="normal" id="EC-7" data-timing="20s" data-menu-title="CephFS Pool" -->
 ## CephFS Pools
 
-### Already 3 FCs, limited set of servers
+### limited set of servers
 
 ### Replication needed for CephFS metadata pool
 * needs also to cover all scenarios
@@ -258,7 +179,7 @@ Note:
 <!-- .slide: data-state="normal" id="EC-8" data-timing="20s" data-menu-title="CephFS Pool - Failues" -->
 ## CephFS Pools
 
-### Failure Scenarios - 3 FCs
+### Failure Scenarios
 
 <table width="80%">
  <colgroup>
@@ -387,8 +308,7 @@ Note:
 ## Settings
 
 ### Rados <!-- .element: class="fragment" data-fragment-index="0" -->
-* Testing: k3m7 <!-- .element: class="fragment" data-fragment-index="0" -->
-* PoC: k4m5 <!-- .element: class="fragment" data-fragment-index="0" -->
+* k4m5 <!-- .element: class="fragment" data-fragment-index="0" -->
 
 ### CephFS <!-- .element: class="fragment" data-fragment-index="1" -->
 * data: k2m4 <!-- .element: class="fragment" data-fragment-index="1" -->

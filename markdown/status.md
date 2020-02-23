@@ -2,29 +2,6 @@
 # Status and Next Steps
 
 
-<!-- .slide: data-state="normal" id="status-1" data-timing="20s" data-menu-title="Functional testing" -->
-## Testing
-
-### 5-node clusters (SUSE and DT's labs) <!-- .element: class="fragment" data-fragment-index="0" -->
-
-### <!-- .element: class="fragment" data-fragment-index="1" --> Functional IMAP testing against upstream dovecot
-* <!-- .element: class="fragment" data-fragment-index="2" --> successful!
-
-### <!-- .element: class="fragment" data-fragment-index="3" --> Functional testing against DT's installation
-* <!-- .element: class="fragment" data-fragment-index="4" --> successful!
-
-### <!-- .element: class="fragment" data-fragment-index="5" --> fixed issues on the way
-
-### <!-- .element: class="fragment" data-fragment-index="5" --> adapted imaptest version available
-
-Note:
-- adapted imaptest to cover some testcases which are used in our setup
-
-
-<!-- .slide: data-state="normal" id="status-1.1" data-timing="20s" data-menu-title="Test Mailbox" -->
-<center><img src="images/mailbox_telekom_email_sec.png"></center>
-
-
 <!-- .slide: data-state="normal" id="status-2" data-timing="20s" data-menu-title="PoC" -->
 ## Proof-of-Concept
 
@@ -38,6 +15,10 @@ Note:
   * <!-- .element: class="fragment" data-fragment-index="2" --> operational procedures
 * <!-- .element: class="fragment" data-fragment-index="3" --> improve and fine-tune Ceph setup
 * <!-- .element: class="fragment" data-fragment-index="4" --> verify and optimize hardware
+
+
+<!-- .slide: data-state="normal" id="status-1.1" data-timing="20s" data-menu-title="Test Mailbox" -->
+<center><img src="images/mailbox_telekom_email_sec.png"></center>
 
 
 <!-- .slide: data-state="normal" id="status-4" data-timing="20s" data-menu-title="Next Steps" -->
