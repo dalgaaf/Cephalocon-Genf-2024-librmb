@@ -66,7 +66,6 @@ Note: out of scope - user data and credential storage; full text search
 
 ### RFC-5322 content stored in RADOS directly <!-- .element: class="fragment" data-fragment-index="2" -->
 
-<span class="fragment" data-fragment-index="3">
 ### Immutable attributes used by Dovecot stored in RADOS xattr <!-- .element: class="fragment" data-fragment-index="3" -->
 * rbox format version <!-- .element: class="fragment" data-fragment-index="3" -->
 * GUID <!-- .element: class="fragment" data-fragment-index="3" -->
@@ -75,7 +74,6 @@ Note: out of scope - user data and credential storage; full text search
 * Mailbox GUID <!-- .element: class="fragment" data-fragment-index="3" -->
 * Physical and virtual size <!-- .element: class="fragment" data-fragment-index="3" -->
 * Mail UID <!-- .element: class="fragment" data-fragment-index="3" -->
-</span>
 
 ### writable attributes are stored in Dovecot index files <!-- .element: class="fragment" data-fragment-index="4" -->
 
@@ -152,11 +150,9 @@ NOTE: alternative - "rados -p rados_mail --all ls"; "for i in `rados -p rados_ma
 
 ### <span>Language: `C++`</span> <!-- .element: class="fragment" data-fragment-index="1" -->
 
-<span class="fragment" data-fragment-index="2">
 ### Supported Dovecot versions: <!-- .element: class="fragment" data-fragment-index="2" -->
 * 2.2 >= 2.2.21 <!-- .element: class="fragment" data-fragment-index="2" -->
 * 2.3 <!-- .element: class="fragment" data-fragment-index="2" -->
-</span>
 
 ### <span><a href="https://github.com/ceph-dovecot/">github.com/ceph-dovecot/</a></span> <!-- .element: class="fragment" data-fragment-index="3" -->
 

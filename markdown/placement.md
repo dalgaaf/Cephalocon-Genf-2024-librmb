@@ -18,7 +18,7 @@ Note:
   <center><img data-src="images/network-infra-mailplatform_v1.svg" style="width:85%"></center>
 </div>
 
-Note: 
+Note:
 - 1G OAM
 - 4x10G ports per node, SFP+ DAC
 - MC-LAG/M-LAG for aggregation and failover
@@ -27,19 +27,20 @@ Note:
 - L2 terminated in rack, L3 for rest
 - will be updated to 100G + may 25G to the Ceph nodes
 
+
 <!-- .slide: data-state="normal" id="placement-1" data-timing="20s" data-menu-title="Data safety" -->
 ## Requirements for Production
 
-* <!-- .element: class="fragment" data-fragment-index="0" --> Lost of customer data __MUST__ be prevented at any cost 
+* <!-- .element: class="fragment" data-fragment-index="0" --> Lost of customer data <b>MUST</b> be prevented at any cost
 * At least replica 3 or comparable <!-- .element: class="fragment" data-fragment-index="1" -->
-* <!-- .element: class="fragment" data-fragment-index="2" --> Cluster __MUST__ be fully operational (R/W) in any scenario 
+* <!-- .element: class="fragment" data-fragment-index="2" --> Cluster <b>MUST</b> be fully operational (R/W) in any scenario
 * Applies to CephFS and Rados part <!-- .element: class="fragment" data-fragment-index="3" -->
 
 ### <!-- .element: class="fragment" data-fragment-index="4" --> Failure scenarios to be covered: 
 * <!-- .element: class="fragment" data-fragment-index="5" --> 1 of 3 fire compartments (FCs)
 * <!-- .element: class="fragment" data-fragment-index="5" --> 1 FC + 1 Server (or HDD/SSD)
 * <!-- .element: class="fragment" data-fragment-index="5" --> 1 FC + 1 Server + 1 HDD/SSD 
-* <!-- .element: class="fragment" data-fragment-index="6" --> Additonal failure __MUST__ not cause data loss
+* <!-- .element: class="fragment" data-fragment-index="6" --> Additonal failure <b>MUST</b> not cause data loss
 
 Note: 
 - additional error sets cluster in hold, no writes to the cluster any more, cause stop of mail system.

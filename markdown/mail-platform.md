@@ -19,7 +19,7 @@
 * ~6.7 billion emails <!-- .element class="fragment" data-fragment-index="8"-->
 * ~1.2 billion index/cache/metadata files <!-- .element class="fragment" data-fragment-index="9"-->
 
-Note: 
+Note:
 - NFS with multiple RAID arrays
 - emails are stored compressed
 
@@ -31,7 +31,6 @@ Note:
 {
  "data" : {
      "labels": ["<1k", "<5k", "<10k", "<50k", "<100k", "<500k", "<1m", "<50m", "<100m", ">100m"],
-
      "datasets": [
          {
              "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -94,7 +93,6 @@ Note:
 {
  "data" : {
      "labels": ["<1k", "<5k", "<10k", "<50k", "<100k", "<500k", "<1m", "<50m", "<100m", ">100m"],
-
      "datasets": [
          {
              "data": [9, 227, 80, 356, 157, 140, 16, 28, 0.007, 0.001],

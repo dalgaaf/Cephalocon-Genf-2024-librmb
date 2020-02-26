@@ -9,9 +9,7 @@
         Contribute! <br />
         <br>
         <a href="http://github.com/ceph-dovecot/">github.com/ceph-dovecot/</a>
-    </h2>
-
-    <h2 class="outside">
+        <br>
         <br>Thank you.
     </h2>
 </div>

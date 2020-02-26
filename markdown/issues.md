@@ -3,7 +3,7 @@
 
 
 <!-- .slide: data-state="normal" id="findings-0" data-timing="20s" data-menu-title="Findings - Performance" -->
-## Findings - Performance
+## Findings - Performance (Luminous)
 <canvas data-chart="line">
 <!--
 {
@@ -82,16 +82,16 @@
 </canvas>
 
 Note:
-- Rados performance is okay
+- tests done with SES5.5
+- Rados performance is okay-ish
 - CephFS is the issue, imaptest performance way to slow with EC
 - metadata/indexes o local HDD significant faster
-- Rados performance is okay
 - no signifcant load on OSDs/MDS
 - find with 3million files: 16sec, second run the same
 
 
 <!-- .slide: data-state="normal" id="findings-1" data-timing="20s" data-menu-title="Findings - Performance - mds" -->
-## Findings - Performance
+## Findings - Performance (Luminous)
 <canvas data-chart="bar">
 <!--
 {
@@ -167,7 +167,8 @@ Note:
 - CephFS replication cluster is on HDD
 
 
-## Findings - Performance
+<!-- .slide: data-state="normal" id="findings-2" data-timing="20s" data-menu-title="Findings - Performance - CephFS" -->
+## Findings - Performance (Luminous)
 <canvas data-chart="line">
 <!--
 {
@@ -240,7 +241,8 @@ Note:
 </canvas>
 
 
-## Findings - Performance
+<!-- .slide: data-state="normal" id="findings-3" data-timing="20s" data-menu-title="Findings - Performance - mds" -->
+## Findings - Performance (Luminous)
 <canvas data-chart="line">
 <!--
 {
@@ -325,6 +327,7 @@ Note:
 </canvas>
 
 
+<!-- .slide: data-state="normal" id="findings-4" data-timing="20s" data-menu-title="Findings - Performance - Rooms" -->
 ## Findings - Performance
 
 ### uneven performance between rooms <!-- .element: class="fragment" data-fragment-index="0" -->
@@ -339,6 +342,7 @@ Note:
   * different firmware version on Intel NICs <!-- .element: class="fragment" data-fragment-index="6" -->
 
 
+<!-- .slide: data-state="normal" id="findings-5" data-timing="20s" data-menu-title="Findings - Performance Degradation" -->
 ## Findings - Performance Degradation
 
 <canvas data-chart="line">
@@ -413,6 +417,7 @@ Note:
 </canvas>
 
 
+<!-- .slide: data-state="normal" id="findings-6" data-timing="20s" data-menu-title="Findings - Performance Degradation" -->
 ## Findings - Performance Degradation
 
 * restart of MDS helps <!-- .element: class="fragment" data-fragment-index="0" -->
@@ -421,7 +426,7 @@ Note:
 * expected to (may) be gone with SES 6.0 <!-- .element: class="fragment" data-fragment-index="3" -->
 
 
-<!-- .slide: data-state="normal" id="findings-3" data-timing="20s" data-menu-title="Findings - Performance" -->
+<!-- .slide: data-state="normal" id="findings-7" data-timing="20s" data-menu-title="Findings - Performance" -->
 ## Findings - Performance
 
 ### CephFS Troubleshooting <!-- .element: class="fragment" data-fragment-index="0" -->
@@ -435,6 +440,7 @@ Note:
   * no significant improvement! <!-- .element: class="fragment" data-fragment-index="5" -->
 
 
+<!-- .slide: data-state="normal" id="findings-8" data-timing="20s" data-menu-title="Findings - Partial Rewrite" -->
 ## Findings - Partial Rewrite Performance
 
 * Dovecot behaviour on index/cache/log files:
@@ -451,7 +457,7 @@ Note:
 * high impact on performance
 
 
-<!-- .slide: data-state="normal" id="findings-3.1" data-timing="20s" data-menu-title="Findings - Performance" -->
+<!-- .slide: data-state="normal" id="findings-9" data-timing="20s" data-menu-title="Findings - Recovery Performance" -->
 ## Findings - Recovery Performance
 
 ### Drawbacks of billions of emails ???
@@ -465,7 +471,7 @@ Note:
     * failure of 1 OSD requires ~4m objects to be moved <!-- .element: class="fragment" data-fragment-index="5" -->
 
 
-<!-- .slide: data-state="normal" id="findings-3.2" data-timing="20s" data-menu-title="Findings - Performance" -->
+<!-- .slide: data-state="normal" id="findings-10" data-timing="20s" data-menu-title="Findings - Recovery Performance" -->
 ## Findings - Recovery Performance
 
 ### Alternatives
@@ -477,7 +483,7 @@ Note:
     * if dbox not full, move after defined time to HDD <!-- .element: class="fragment" data-fragment-index="3" -->
 
 
-<!-- .slide: data-state="normal" id="findings-5" data-timing="20s" data-menu-title="Findings - Performance" -->
+<!-- .slide: data-state="normal" id="findings-11" data-timing="20s" data-menu-title="Findings - Operations" -->
 ## Findings - Operations
 
 * Which EC profile is assigned to a pool?
@@ -492,7 +498,7 @@ pool 6 'cephfs_data' erasure size 6 min_size 3 crush_rule 1 \
 ```
 
 
-<!-- .slide: data-state="normal" id="findings-6" data-timing="20s" data-menu-title="Findings - Performance" -->
+<!-- .slide: data-state="normal" id="findings-12" data-timing="20s" data-menu-title="Findings - Operations" -->
 ## Findings - Operations
 
 * Which EC profile is assigned to a pool?
@@ -516,7 +522,7 @@ pool 6 'cephfs_data' erasure size 6 min_size 3 crush_rule 1 \
 ```
 
 
-<!-- .slide: data-state="normal" id="findings-6" data-timing="20s" data-menu-title="Findings - Performance" -->
+<!-- .slide: data-state="normal" id="findings-13" data-timing="20s" data-menu-title="Findings - Operations" -->
 ## Findings - Operations
 
 * Which EC profile is assigned to a pool?
@@ -545,7 +551,7 @@ w=8
 ```
 
 
-<!-- .slide: data-state="normal" id="findings-10" data-timing="20s" data-menu-title="Conclusion" -->
+<!-- .slide: data-state="normal" id="findings-14" data-timing="20s" data-menu-title="Conclusion" -->
 ## Learnings
 
 ### The technical part works in general! <!-- .element: class="fragment" data-fragment-index="0" -->

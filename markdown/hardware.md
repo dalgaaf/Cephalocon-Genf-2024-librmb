@@ -31,7 +31,6 @@
 * <!-- .element: class="fragment" data-fragment-index="0" --> OSD: 1x 64-bit AMD-64, 1GB RAM/1TB of storage, 2x 1GBit NICs
 * <!-- .element: class="fragment" data-fragment-index="0" --> MDS: 1x 64-bit AMD-64 quad-core, 1 GB RAM minimum per MDS, 2x 1GBit NICs
 
-<br>
 ### NUMA, high clocked CPUs and large RAM overkill? <!-- .element: class="fragment" data-fragment-index="1" -->
 * <!-- .element: class="fragment" data-fragment-index="2" --> It's PoC hardware! Better save than sorry!
 * <!-- .element: class="fragment" data-fragment-index="3" --> Vendor did not offer single CPU nodes for number of drives
