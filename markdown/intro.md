@@ -1,6 +1,6 @@
 <!-- .slide: data-state="cover" id="cover-page" data-timing="20" -->
 <br>
-<img src="images/OpenInfra_Days_-Turkey_Horizontal.png" style="height:60px;width:auto;margin:0px"><br>
+<img src="images/OpenInfra_Days_-Turkey_Horizontal.png" style="height:75px;width:auto;margin:0px"><br>
 <font size="5">Istanbul 2020</font>
 <br>
 <br>
