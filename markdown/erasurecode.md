@@ -157,7 +157,7 @@ Note:
 
 Note:
 - k+m should be something that can be devided by 3 to get even distribution
-- k6m6: 1FC+1OSD not covered, all in use, poor READ performance
+- k6m6: poor READ performance
 - k4m8 and k6m6 need more than 12 server, otherwise in testing no recovery
 
 
