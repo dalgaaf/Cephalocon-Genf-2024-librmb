@@ -443,18 +443,18 @@ Note:
 <!-- .slide: data-state="normal" id="findings-8" data-timing="20s" data-menu-title="Findings - Partial Rewrite" -->
 ## Findings - Partial Rewrite Performance
 
-* Dovecot behaviour on index/cache/log files:
-  * cause small changes/adds on these files
-  * requires partial rewrites
+### Dovecot behaviour on index/cache/log files: <!-- .element: class="fragment" data-fragment-index="1" -->
+  * cause small changes/adds on these files <!-- .element: class="fragment" data-fragment-index="1" -->
+  * requires partial rewrites <!-- .element: class="fragment" data-fragment-index="1" -->
 
-* Partial rewrite changes:
-  * fully read file from the OSDs
-  * change file
-  * recalculate chunks
-  * rewrite to cluster
-  * -> at least read+write 
+### Partial rewrite changes: <!-- .element: class="fragment" data-fragment-index="2" -->
+  * fully read file from the OSDs <!-- .element: class="fragment" data-fragment-index="2" -->
+  * change file <!-- .element: class="fragment" data-fragment-index="2" -->
+  * recalculate chunks <!-- .element: class="fragment" data-fragment-index="2" -->
+  * rewrite to cluster <!-- .element: class="fragment" data-fragment-index="2" -->
+  * -> at least read+write <!-- .element: class="fragment" data-fragment-index="2" -->
 
-* high impact on performance
+### high impact on performance <!-- .element: class="fragment" data-fragment-index="3" -->
 
 
 <!-- .slide: data-state="normal" id="findings-9" data-timing="20s" data-menu-title="Findings - Recovery Performance" -->
