@@ -55,7 +55,7 @@ Note:
 ## Where to store emails in Ceph?
 
 <div>
-    <img style="width: 35%; left: 55%; position: absolute" alt="RGW"
+    <img style="width: 35%; left: 60%; position: absolute" alt="RGW"
          data-src="images/rgw.svg" />
 </div>
 
