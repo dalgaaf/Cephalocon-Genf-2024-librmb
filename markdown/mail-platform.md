@@ -9,7 +9,7 @@
   * includes also voice mail files <!-- .element class="fragment" data-fragment-index="1"-->
 * dovecot <!-- .element class="fragment" data-fragment-index="2"-->
   * LGPL 2.1, MIT <!-- .element class="fragment" data-fragment-index="2"-->
-  * 76% market share (openemailsurvey.org, 2019) <!-- .element class="fragment" data-fragment-index="2"-->
+  * 77% market share (openemailsurvey.org, 2020) <!-- .element class="fragment" data-fragment-index="2"-->
 * NAS with sharded NFS <!-- .element class="fragment" data-fragment-index="3"-->
 
 ### Dimensions <!-- .element class="fragment" data-fragment-index="5"-->
