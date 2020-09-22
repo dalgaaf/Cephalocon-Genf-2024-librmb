@@ -22,17 +22,6 @@ Note:
 - Dovecot Pro licence no option due to TCO impact. Model is to pay per account if active or inactive. With 39m accounts it would break the BC.
 
 
-<!-- .slide: data-state="normal" id="librmb-DT-0" data-timing="20s" data-menu-title="Dovecot obox" -->
-## Dovecot Pro obox Plugin
-
-<div>
-     <img style="width:90%" alt="obox architecture overview"
-          data-src="images/dovecot-obox-plugin-architecture-normal.svg" />
-</div>
-
-Note: quite complex setup with many layers of caches, mobox is similar
-
-
 <!-- .slide: data-state="normal" id="librmb-DT-1" data-timing="20s" data-menu-title="Ceph Dovecot Plugin" -->
 ## Ceph plugin for Dovecot
 ### First Step: hybrid approach <!-- .element class="fragment" data-fragment-index="0"-->
@@ -163,7 +152,7 @@ NOTE: alternative - "rados -p rados_mail --all ls"; "for i in `rados -p rados_ma
 ## Which recommended Ceph Release?
 
 <div>
-     <img style="width: 60%; left: 47%; position: absolute" alt="ceph luminous"
+     <img style="width: 50%; left: 47%; position: absolute" alt="ceph luminous"
           data-src="images/ceph_nautilus_fixed.svg" />
 </div> <!-- .element: class="fragment" data-fragment-index="5" -->
 
