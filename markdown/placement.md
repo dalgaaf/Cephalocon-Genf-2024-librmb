@@ -1,21 +1,11 @@
 <!-- .slide: data-state="section-break" id="section-break-6" data-timing="10s" -->
-# Placement
+# Cluster Setup
 
 
-<!-- .slide: data-state="normal" id="placement-3" data-timing="20s" data-menu-title="3FCs" -->
-### Current setup
+<!-- .slide: data-state="normal" id="placement-1" data-timing="20s" data-menu-title="3FCs" -->
+## Current setup
 <div>
   <center><img data-src="images/fc-ceph-EC-color_white_v2.svg" style="width:75%"></center>
-</div>
-
-Note:
-- cluster gets extended 18 HDD nodes on 3 FCs
-- for better distribution, especially for EC
-
-
-<!-- .slide: data-state="normal" id="placement-net-2" data-timing="20s" data-menu-title="Network Overview" -->
-<div>
-  <center><img data-src="images/network-infra-mailplatform_v1.svg" style="width:85%"></center>
 </div>
 
 Note:
@@ -28,7 +18,7 @@ Note:
 - will be updated to 100G + may 25G to the Ceph nodes
 
 
-<!-- .slide: data-state="normal" id="placement-1" data-timing="20s" data-menu-title="Data safety" -->
+<!-- .slide: data-state="normal" id="placement-2" data-timing="20s" data-menu-title="Data safety" -->
 ## Requirements for Production
 
 * <!-- .element: class="fragment" data-fragment-index="0" --> Lost of customer data <b>MUST</b> be prevented at any cost
@@ -45,3 +35,42 @@ Note:
 Note: 
 - additional error sets cluster in hold, no writes to the cluster any more, cause stop of mail system.
 - max. failure scenario would be 4 independet errors before cluster stops to be responsive, even then no data loss.
+
+
+<!-- .slide: data-state="normal" id="placement-3" data-timing="20s" data-menu-title="Erasure Coding Diagram" -->
+## Distribution: Erasure Coding (EC)
+<div>
+  <center><img data-src="images/ec_explained_extra.svg" style="width:65%"></center>
+</div>
+
+Note:
+- one copy plus parity
+- Object is split into *k* chunks
+- Additonal *m* coding chunks will be created (encoded)
+- chunks/shards will be distributed as defined in crush and erasure code profile
+- space effective
+- performance impact on small objects
+- expensive recovery
+- read on replication faster due to fact that k objects need to read (latency, CPU)
+
+
+<!-- .slide: data-state="normal" id="EC-10" data-timing="20s" data-menu-title="Cluster settings" -->
+## Settings
+
+### Rados <!-- .element: class="fragment" data-fragment-index="0" -->
+* k4m5 <!-- .element: class="fragment" data-fragment-index="0" -->
+
+### CephFS <!-- .element: class="fragment" data-fragment-index="1" -->
+* data: 6x replication <!-- .element: class="fragment" data-fragment-index="1" -->
+* meta_data: 6x replication <!-- .element: class="fragment" data-fragment-index="1" -->
+* Ops may need to intervene <!-- .element: class="fragment" data-fragment-index="1" -->
+* Cluster able to run recovery <!-- .element: class="fragment" data-fragment-index="1" -->
+
+### Production <!-- .element: class="fragment" data-fragment-index="2" -->
+* EC/Replication need to change again <!-- .element: class="fragment" data-fragment-index="2" -->
+
+Note:
+- Rados settings: comparable regarding chunks written, PoC less overhead
+- CephFS settings same for both
+- Ceph: In case of max error OPS need to inervene to ensure max_size=k+1 handling.
+

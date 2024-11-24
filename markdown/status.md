@@ -1,9 +1,9 @@
 <!-- .slide: data-state="section-break" id="section-break-7" data-timing="10s" -->
-# Status and Next Steps
+# Proof-of-Concept
 
 
 <!-- .slide: data-state="normal" id="status-2" data-timing="20s" data-menu-title="PoC" -->
-## Proof-of-Concept
+## Phase One
 
 * <!-- .element: class="fragment" data-fragment-index="1" --> run load tests
   * <!-- .element: class="fragment" data-fragment-index="1" --> full synthetic
@@ -17,28 +17,15 @@
 * <!-- .element: class="fragment" data-fragment-index="4" --> verify and optimize hardware
 
 
-<!-- .slide: data-state="normal" id="status-1.1" data-timing="20s" data-menu-title="Test Mailbox" -->
-<center><img src="images/mailbox_telekom_email_sec.png"></center>
+<!-- .slide: data-state="normal" id="status-2" data-timing="20s" data-menu-title="PoC" -->
+## Phase Two
 
+* <!-- .element: class="fragment" data-fragment-index="1" --> limited real world test
+  * <!-- .element: class="fragment" data-fragment-index="1" --> move real users to the platform
+  * <!-- .element: class="fragment" data-fragment-index="1" --> step by step, increasing
 
-<!-- .slide: data-state="normal" id="status-4" data-timing="20s" data-menu-title="Next Steps" -->
-## Move to Production
-
-### Production <!-- .element: class="fragment" data-fragment-index="0" -->
-* <!-- .element: class="fragment" data-fragment-index="1" --> verify if all requirements are fulfilled
-* <!-- .element: class="fragment" data-fragment-index="2" --> integrate in production
-* <!-- .element: class="fragment" data-fragment-index="3" --> migrate users step-by-step
-* <!-- .element: class="fragment" data-fragment-index="4" --> extend to final size
-  * <!-- .element: class="fragment" data-fragment-index="4" --> 128 HDD nodes, 1200 OSDs, 4,7 PiB
-  * <!-- .element: class="fragment" data-fragment-index="4" --> 15 SSD nodes, 120 OSDs, 175 TiB
-
-
-<!-- .slide: data-state="normal" id="status-5" data-timing="20s" data-menu-title="Further Development" -->
-## Further Development
-
-### Goal: Pure RADOS backend, store metadata/index in Ceph omap
-
-<div>
-     <img style="width: 87%;" alt="librmb target architecture overview"
-          data-src="images/dovecot-plugin-architecture-pure-rados.svg" />
-</div>
+* <!-- .element: class="fragment" data-fragment-index="2" --> identify issues with migration process
+* <!-- .element: class="fragment" data-fragment-index="3" --> learn about real user load on Ceph
+  * <!-- .element: class="fragment" data-fragment-index="3" --> identify and fix issues
+  * <!-- .element: class="fragment" data-fragment-index="3" --> improve performance if required
+* <!-- .element: class="fragment" data-fragment-index="4" --> create a base for final decision regarding HW, sizing and cost

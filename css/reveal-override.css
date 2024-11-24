@@ -3,31 +3,31 @@
 @import url(//fonts.googleapis.com/css?family=Special+Elite:400,700);
 @import url(//fonts.googleapis.com/css?family=Source+Code+Pro);
 @font-face {
-  font-family: 'Open Sans Condensed';
+  font-family: "Open Sans Condensed";
   font-style: normal;
   font-weight: 300;
   src: local("Open Sans Condensed Light"), local("OpenSansCondensed-Light"), url(https://fonts.gstatic.com/s/opensanscondensed/v12/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMQg.ttf) format("truetype");
 }
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   src: local("Roboto"), local("Roboto-Regular"), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf) format("truetype");
 }
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   src: local("Roboto Bold"), local("Roboto-Bold"), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format("truetype");
 }
 @font-face {
-  font-family: 'Special Elite';
+  font-family: "Special Elite";
   font-style: normal;
   font-weight: 400;
   src: local("Special Elite Regular"), local("SpecialElite-Regular"), url(https://fonts.gstatic.com/s/specialelite/v8/XLYgIZbkc4JPUL5CVArUVL0ntnAOTQ.ttf) format("truetype");
 }
 @font-face {
-  font-family: 'Source Code Pro';
+  font-family: "Source Code Pro";
   font-style: normal;
   font-weight: 400;
   src: local("Source Code Pro"), local("SourceCodePro-Regular"), url(https://fonts.gstatic.com/s/sourcecodepro/v7/HI_SiYsKILxRpg3hIP6sJ7fM7PqlPevT.ttf) format("truetype");
@@ -83,8 +83,8 @@ body {
 }
 .reveal h3 {
   /* before 1.5em */
-  margin-top: 1.0em;
-  font-size: 1.0em;
+  margin-top: 1em;
+  font-size: 1em;
 }
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5 {
   font-family: "Roboto", sans-serif;
@@ -137,7 +137,7 @@ body {
 .reveal pre {
   box-shadow: none;
   padding: 5px 5px;
-  background-color: #ededed;
+  background-color: rgb(237, 237, 237);
   max-width: 90%;
 }
 .reveal pre code {
@@ -216,112 +216,6 @@ body {
   .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
     color: black;
   }
-}
-/*
-highlight.js style for syntax highlighting using officially
-sanctioned presentation slide-deck colours.
-*/
-.reveal .slides .hljs {
-  display: block;
-  overflow-x: auto;
-  background: #ededed;
-  color: black;
-  -webkit-text-size-adjust: none;
-}
-.reveal .slides .hljs-keyword,
-.reveal .slides .hljs-tag,
-.reveal .slides .css .hljs-class,
-.reveal .slides .css .hljs-id,
-.reveal .slides .lisp .hljs-title,
-.reveal .slides .nginx .hljs-title,
-.reveal .slides .hljs-request,
-.reveal .slides .hljs-status,
-.reveal .slides .lang-clojure .hljs-attribute {
-  color: #00c01d;
-}
-.reveal .slides .lang-django .hljs-template_tag,
-.reveal .slides .lang-django .hljs-variable,
-.reveal .slides .lang-django .hljs-filter .hljs-argument {
-  color: #00b2e2;
-}
-.reveal .slides .hljs-number,
-.reveal .slides .hljs-date {
-  color: #02d35f;
-}
-.reveal .slides .lang-dos .hljs-envvar,
-.reveal .slides .lang-dos .hljs-stream,
-.reveal .slides .hljs-variable,
-.reveal .slides .lang-apache .hljs-sqbracket,
-.reveal .slides .hljs-name {
-  color: #00b2e2;
-}
-.reveal .slides .lang-dos .hljs-flow,
-.reveal .slides .diff .hljs-change,
-.reveal .slides .python .exception,
-.reveal .slides .python .hljs-built_in,
-.reveal .slides .hljs-literal,
-.reveal .slides .tex .hljs-special {
-  color: #ed6924;
-}
-.reveal .slides .diff .hljs-chunk,
-.reveal .slides .hljs-subst {
-  color: #a7a9ac;
-}
-.reveal .slides .lang-dos .hljs-keyword,
-.reveal .slides .hljs-decorator,
-.reveal .slides .hljs-title,
-.reveal .slides .hljs-type,
-.reveal .slides .diff .hljs-header,
-.reveal .slides .lang-ruby .hljs-class .hljs-parent,
-.reveal .slides .lang-apache .hljs-tag,
-.reveal .slides .nginx .hljs-built_in,
-.reveal .slides .tex .hljs-command,
-.reveal .slides .hljs-prompt {
-  color: #fd9a2b;
-  font-weight: bold !important;
-}
-.reveal .slides .lang-dos .hljs-winutils,
-.reveal .slides .lang-ruby .hljs-symbol,
-.reveal .slides .lang-ruby .hljs-symbol .hljs-string,
-.reveal .slides .lang-ruby .hljs-string {
-  color: #de0080;
-}
-.reveal .slides .diff .hljs-deletion,
-.reveal .slides .hljs-string,
-.reveal .slides .hljs-tag .hljs-value,
-.reveal .slides .hljs-preprocessor,
-.reveal .slides .hljs-pragma,
-.reveal .slides .hljs-built_in,
-.reveal .slides .lang-smalltalk .hljs-class,
-.reveal .slides .lang-smalltalk .hljs-localvars,
-.reveal .slides .lang-smalltalk .hljs-array,
-.reveal .slides .css .hljs-rule .hljs-value,
-.reveal .slides .hljs-attr_selector,
-.reveal .slides .hljs-pseudo,
-.reveal .slides .lang-apache .hljs-cbracket,
-.reveal .slides .tex .hljs-formula,
-.reveal .slides .lang-coffeescript .hljs-attribute {
-  color: #02a49c;
-}
-.reveal .slides .hljs-shebang,
-.reveal .slides .diff .hljs-addition,
-.reveal .slides .hljs-comment,
-.reveal .slides .hljs-annotation,
-.reveal .slides .hljs-pi,
-.reveal .slides .hljs-doctype {
-  color: #a7a9ac;
-}
-.reveal .slides .lang-coffeescript .javascript,
-.reveal .slides .javascript .xml,
-.reveal .slides .tex .hljs-formula,
-.reveal .slides .xml .javascript,
-.reveal .slides .xml .vbscript,
-.reveal .slides .xml .css,
-.reveal .slides .xml .hljs-cdata {
-  opacity: 0.5;
-}
-.reveal .slides .hljs-constant {
-  color: #02a49c;
 }
 
 /*# sourceMappingURL=reveal-override.css.map */
