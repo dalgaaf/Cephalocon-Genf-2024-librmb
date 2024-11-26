@@ -75,6 +75,14 @@ body {
         color: black;
     }
 
+
+    h4 {
+        /* before 1.5em */
+        font-size: 0.5em;
+        margin-top: 1.0em;
+        font-size: 1.0em;
+    }
+
     h6 {
         font-size: 2em;
         font-family: "Roboto", sans-serif;
@@ -209,7 +217,7 @@ body {
 
       code {
           font-family: "Source Code Pro", monospace !important;
-          color: #555555 !important;
+          color: #1c1c1c !important;
           padding: 0px 0px !important;
           font-size: 2.3em;
           font-weight: bold;

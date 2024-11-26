@@ -3,31 +3,31 @@
 @import url(//fonts.googleapis.com/css?family=Special+Elite:400,700);
 @import url(//fonts.googleapis.com/css?family=Source+Code+Pro);
 @font-face {
-  font-family: "Open Sans Condensed";
+  font-family: 'Open Sans Condensed';
   font-style: normal;
   font-weight: 300;
   src: local("Open Sans Condensed Light"), local("OpenSansCondensed-Light"), url(https://fonts.gstatic.com/s/opensanscondensed/v12/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMQg.ttf) format("truetype");
 }
 @font-face {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   src: local("Roboto"), local("Roboto-Regular"), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf) format("truetype");
 }
 @font-face {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   src: local("Roboto Bold"), local("Roboto-Bold"), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format("truetype");
 }
 @font-face {
-  font-family: "Special Elite";
+  font-family: 'Special Elite';
   font-style: normal;
   font-weight: 400;
   src: local("Special Elite Regular"), local("SpecialElite-Regular"), url(https://fonts.gstatic.com/s/specialelite/v8/XLYgIZbkc4JPUL5CVArUVL0ntnAOTQ.ttf) format("truetype");
 }
 @font-face {
-  font-family: "Source Code Pro";
+  font-family: 'Source Code Pro';
   font-style: normal;
   font-weight: 400;
   src: local("Source Code Pro"), local("SourceCodePro-Regular"), url(https://fonts.gstatic.com/s/sourcecodepro/v7/HI_SiYsKILxRpg3hIP6sJ7fM7PqlPevT.ttf) format("truetype");
@@ -83,14 +83,20 @@ body {
 }
 .reveal h3 {
   /* before 1.5em */
-  margin-top: 1em;
-  font-size: 1em;
+  margin-top: 1.0em;
+  font-size: 1.0em;
 }
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5 {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   text-transform: none !important;
   color: black;
+}
+.reveal h4 {
+  /* before 1.5em */
+  font-size: 0.5em;
+  margin-top: 1.0em;
+  font-size: 1.0em;
 }
 .reveal h6 {
   font-size: 2em;
@@ -137,7 +143,7 @@ body {
 .reveal pre {
   box-shadow: none;
   padding: 5px 5px;
-  background-color: rgb(237, 237, 237);
+  background-color: #ededed;
   max-width: 90%;
 }
 .reveal pre code {
@@ -194,7 +200,7 @@ body {
 
 .cover .reveal code {
   font-family: "Source Code Pro", monospace !important;
-  color: #555555 !important;
+  color: #1c1c1c !important;
   padding: 0px 0px !important;
   font-size: 2.3em;
   font-weight: bold;
