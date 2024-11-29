@@ -32,7 +32,7 @@ Note:
 * usually separated metadata, caches and indexes <!-- .element class="fragment" data-fragment-index="2"-->
   * lost of metadata/indexes is critical <!-- .element class="fragment" data-fragment-index="2"-->
 * without attachments easy to compress <!-- .element class="fragment" data-fragment-index="3"-->
-* attachments may deduplicated <!-- .element class="fragment" data-fragment-index="4"-->
+* attachments may be deduplicated <!-- .element class="fragment" data-fragment-index="4"-->
 
 Note: 
 - Emails are written once, read many ; 
@@ -42,16 +42,17 @@ Note:
 
 
 <!-- .slide: data-state="normal" id="project-motivation" data-timing="20s" data-menu-title="Project Motivation" -->
-## Objectives
+## Motivation
 
 ### Explore new storage technologies
 
 * faster and automatic self healing <!-- .element class="fragment" data-fragment-index="1"-->
-* less IO overhead <!-- .element class="fragment" data-fragment-index="2"-->
-* prevent vendor lock-in <!-- .element class="fragment" data-fragment-index="3"-->
-* commodity hardware <!-- .element class="fragment" data-fragment-index="4"-->
-* open source where feasible <!-- .element class="fragment" data-fragment-index="5"-->
-* reduce Total Cost of Ownership <!-- .element class="fragment" data-fragment-index="6"-->
+* global namespace <!-- .element class="fragment" data-fragment-index="2"-->
+* less IO overhead <!-- .element class="fragment" data-fragment-index="3"-->
+* prevent vendor lock-in <!-- .element class="fragment" data-fragment-index="4"-->
+* commodity hardware <!-- .element class="fragment" data-fragment-index="5"-->
+* open source where feasible <!-- .element class="fragment" data-fragment-index="6"-->
+* reduce Total Cost of Ownership <!-- .element class="fragment" data-fragment-index="7"-->
 
 Note: 
 - self healing: compared to sharded RAID setups

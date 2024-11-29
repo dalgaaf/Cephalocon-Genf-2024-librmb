@@ -37,23 +37,6 @@ Note:
 - max. failure scenario would be 4 independet errors before cluster stops to be responsive, even then no data loss.
 
 
-<!-- .slide: data-state="normal" id="placement-3" data-timing="20s" data-menu-title="Erasure Coding Diagram" -->
-## Distribution: Erasure Coding (EC)
-<div>
-  <center><img data-src="images/ec_explained_extra.svg" style="width:65%"></center>
-</div>
-
-Note:
-- one copy plus parity
-- Object is split into *k* chunks
-- Additonal *m* coding chunks will be created (encoded)
-- chunks/shards will be distributed as defined in crush and erasure code profile
-- space effective
-- performance impact on small objects
-- expensive recovery
-- read on replication faster due to fact that k objects need to read (latency, CPU)
-
-
 <!-- .slide: data-state="normal" id="EC-10" data-timing="20s" data-menu-title="Cluster settings" -->
 ## Settings
 

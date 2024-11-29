@@ -67,26 +67,3 @@ Note: out of scope - user data and credential storage; full text search
 
 ### still under development <!-- .element: class="fragment" data-fragment-index="4" -->
 
-
-<!-- .slide: data-state="normal" id="ceph-version" data-timing="20s" data-menu-title="Ceph version" -->
-## Which recommended Ceph Release?
-
-<div>
-     <img style="width: 50%; left: 47%; position: absolute" alt="ceph luminous"
-          data-src="images/ceph_nautilus_fixed.svg" />
-</div> <!-- .element: class="fragment" data-fragment-index="5" -->
-
-### Required Features: <!-- .element: class="fragment" data-fragment-index="0" -->
-
-* <!-- .element: class="fragment" data-fragment-index="1" --> Bluestore
-  * <!-- .element: class="fragment" data-fragment-index="1" --> write performance is critical
-* <!-- .element: class="fragment" data-fragment-index="2" --> CephFS
-  * <!-- .element: class="fragment" data-fragment-index="2" --> Multi-MDS
-* <!-- .element: class="fragment" data-fragment-index="3" --> Erasure coding
-* <!-- .element: class="fragment" data-fragment-index="3" --> High level of security
-
-### Enterprise currently products used: <!-- .element: class="fragment" data-fragment-index="6" -->
-* <!-- .element: class="fragment" data-fragment-index="6" --> SES 6, SLES 15-SP1
-
-Note:
-- minimum release is Ceph Luminous

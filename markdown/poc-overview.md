@@ -2,6 +2,25 @@
 # Proof-of-Concept
 
 
+<!-- .slide: data-state="normal" id="status-1" data-timing="20s" data-menu-title="PoC" -->
+## Limitations
+
+* Updates but no upgrades of Ceph version
+  * SES with Nautilus
+
+* No hardware changes
+
+* No placement changes
+  * hardware
+  * erasure coding
+
+* No changes of deployment and automation
+
+Note: we are aware of the limitiations caused by SUSE Product decisions (cancel SES), 
+      and changes in deployment methodes, tried to minimize impact on the PoC even if this
+      may end up in e.g. make not use of major improvements
+
+
 <!-- .slide: data-state="normal" id="status-2" data-timing="20s" data-menu-title="PoC" -->
 ## Phase One
 

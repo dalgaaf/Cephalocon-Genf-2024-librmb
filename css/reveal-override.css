@@ -198,6 +198,16 @@ body {
   color: black !important;
 }
 
+.slide-background-content {
+  background-image: url("../images/Ceph2024-Events-Hero-2400x1200-1-1920x960_light_extrem.jpg");
+  background-repeat: no-repeat;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
+
 .cover .reveal code {
   font-family: "Source Code Pro", monospace !important;
   color: #1c1c1c !important;

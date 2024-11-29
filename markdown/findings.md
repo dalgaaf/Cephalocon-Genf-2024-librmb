@@ -141,8 +141,6 @@
     * if dbox not full, move after defined time to HDD <!-- .element: class="fragment" data-fragment-index="3" -->
 
 
-
-
 <!-- .slide: data-state="normal" id="findings-14" data-timing="20s" data-menu-title="Conclusion" -->
 ## Learnings
 

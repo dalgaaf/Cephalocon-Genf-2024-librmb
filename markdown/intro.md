@@ -1,4 +1,4 @@
-<!-- .slide: data-state="cover" id="cover-page" data-timing="20" data-background-image="images/Ceph2024-Events-Hero-2400x1200-1-1920x960_light2.jpg" data-background-size="contain" -->
+<!-- .slide: data-state="cover" id="cover-page" data-timing="20" -->
 <img data-src="images/cephalocon-2024.png" style="width:25%;margin:0px;left:80%;position:absolute">
 <br>
 <br>
