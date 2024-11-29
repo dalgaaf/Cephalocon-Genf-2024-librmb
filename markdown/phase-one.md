@@ -117,4 +117,8 @@ Result:
   * no major unpreventable impact for customers
   * no data loss
 
+* Compared to NFS
+  * expected behaviour
+  * comparable performance to HDD based NFS
+
 Note: cluster may unresponsive for short period of time, unlikely to be visible for customer (due to cashes and queues)
