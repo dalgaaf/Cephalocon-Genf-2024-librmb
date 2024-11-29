@@ -32,11 +32,3 @@
   * no customer impact
   * no data loss
 
-<!-- .slide: data-state="normal" id="status-3" data-timing="20s" data-menu-title="PoC" -->
-## Selected issues
-
-* MDS standby-replay
-* expire job
-* MDS load distribution
-* recover broken mailboxes (search through index)
-* Number of PGs
