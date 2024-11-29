@@ -36,3 +36,9 @@ Note:
   * no customer impact
   * no data loss
 
+
+<!-- .slide: data-state="normal" id="status-3" data-timing="20s" data-menu-title="PoC" -->
+## Results
+
+<center><img data-src="images/grafana_full_view.png" style="width:95%"></center>
+

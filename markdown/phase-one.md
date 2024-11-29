@@ -96,7 +96,7 @@ Note:
 
 Procedure:
 * fillup would take a long time: reduce capacity, set 9 nodes as out
-* to avoid recovery: clean up rados_mail, would have taken ~24-26h, instead re-deloy nodes
+* to avoid recovery: clean up rados_mail, would have taken ~24-26h¹, instead re-deloy nodes
 * fillup to 90% with test data, start tests to fill up to 100%
 * check cluster behaviour
 * add new OSD nodes to check behaviour
@@ -106,8 +106,25 @@ Result:
 * painful long recovery
 * prevent at all costs
 
+Note:
+¹ 100% load on RocksDB SSDs
+
 
 <!-- .slide: data-state="normal" id="phase-one-7" data-timing="20s" data-menu-title="PoC Phase One Results" -->
+## Selected Testcases
+### Cluster full
+<center><img data-src="images/test_fullyfilled.png" style="width:50%"></center>
+
+Note:
+- 7:20 added first node with 10 OSDs, cluster starts reballance/recovery
+- 7:30 next node
+- 8:00 next node: still in status "1 pool full"
+- 8:45 add another 2 nodes
+- cluster in status full till 14:15, 7h after adding the first node.
+- clients massivly affected
+
+
+<!-- .slide: data-state="normal" id="phase-one-8" data-timing="20s" data-menu-title="PoC Phase One Testscases" -->
 ## Results
 
 * in total 22 major test scenarios
