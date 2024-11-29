@@ -66,10 +66,11 @@ Note: https://github.com/ceph-dovecot/dovecot-ceph-plugin/issues/349
 
 TODO!!!
 
+
 <!-- .slide: data-state="normal" id="findings-5" data-timing="20s" data-menu-title="PoC" -->
 ## Performance during initial import
 
-### Issue: R/W performance low during with increasing number of accounts
+### Issue: R/W performance low with increasing number of accounts
 
 * Performance analysis
 * Issues identified:
@@ -85,23 +86,6 @@ TODO!!!
 
 Note:
 * issue 594
-
-
-<!-- .slide: data-state="normal" id="findings-8" data-timing="20s" data-menu-title="Findings - Partial Rewrite" -->
-## Findings - Partial Rewrite Performance
-
-### Dovecot behaviour on index/cache/log files: <!-- .element: class="fragment" data-fragment-index="1" -->
-  * cause small changes/adds on these files <!-- .element: class="fragment" data-fragment-index="1" -->
-  * requires partial rewrites <!-- .element: class="fragment" data-fragment-index="1" -->
-
-### Partial rewrite changes: <!-- .element: class="fragment" data-fragment-index="2" -->
-  * fully read file from the OSDs <!-- .element: class="fragment" data-fragment-index="2" -->
-  * change file <!-- .element: class="fragment" data-fragment-index="2" -->
-  * recalculate chunks <!-- .element: class="fragment" data-fragment-index="2" -->
-  * rewrite to cluster <!-- .element: class="fragment" data-fragment-index="2" -->
-  * -> at least read+write <!-- .element: class="fragment" data-fragment-index="2" -->
-
-### high impact on performance <!-- .element: class="fragment" data-fragment-index="3" -->
 
 
 <!-- .slide: data-state="normal" id="findings-10" data-timing="20s" data-menu-title="Findings - Recovery Performance" -->

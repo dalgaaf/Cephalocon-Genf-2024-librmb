@@ -13,7 +13,7 @@
 * faster network (100G), decrease port numbers <!-- .element: class="fragment" data-fragment-index="3" -->
 * replace discontinued SES <!-- .element: class="fragment" data-fragment-index="4" -->
 * partner to provide <!-- .element: class="fragment" data-fragment-index="5" -->
-  * rack-wise hardware concept <!-- .element: class="fragment" data-fragment-index="5" -->
+  * storage appliance per rack <!-- .element: class="fragment" data-fragment-index="5" -->
   * up-to-date Ceph version <!-- .element: class="fragment" data-fragment-index="5" -->
   * support for Ceph <!-- .element: class="fragment" data-fragment-index="5" -->
 <div>
