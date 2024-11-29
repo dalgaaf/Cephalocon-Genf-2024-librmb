@@ -26,9 +26,6 @@
 ## Number of PGs
 
 
-<!-- .slide: data-state="normal" id="findings-7" data-timing="20s" data-menu-title="Findings - Performance" -->
-## Findings - Performance
-
 <!-- .slide: data-state="normal" id="findings-8" data-timing="20s" data-menu-title="Findings - Partial Rewrite" -->
 ## Findings - Partial Rewrite Performance
 

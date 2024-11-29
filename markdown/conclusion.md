@@ -5,15 +5,16 @@
 <!-- .slide: data-state="normal" id="conclusion-0" data-timing="20s" data-menu-title="Conclusion" -->
 ## Summary and conclusions
 
-### Ceph can replace NFS <!-- .element: class="fragment" data-fragment-index="0" -->
-* <!-- .element: class="fragment" data-fragment-index="1" --> mails in RADOS
-* <!-- .element: class="fragment" data-fragment-index="2" --> metadata/indexes in CephFS
-* <!-- .element: class="fragment" data-fragment-index="3" --> BlueStore, EC
+### Ceph can replace NFS for emails <!-- .element: class="fragment" data-fragment-index="0" -->
+* even in large enterprise setups <!-- .element: class="fragment" data-fragment-index="0" -->
 
-### librmb and dovecot rbox <!-- .element: class="fragment" data-fragment-index="4" -->
-* <!-- .element: class="fragment" data-fragment-index="5" --> Open Source, LGPLv2.1
-* <!-- .element: class="fragment" data-fragment-index="6" --> librmb can be used in non-dovecot systems
-* <!-- .element: class="fragment" data-fragment-index="7" --> still under development
-
-### PoC in progress <!-- .element: class="fragment" data-fragment-index="8" -->
+### Optimize cluster concept <!-- .element: class="fragment" data-fragment-index="1" -->
+* higher density <!-- .element: class="fragment" data-fragment-index="2" -->
+* faster network (100G) <!-- .element: class="fragment" data-fragment-index="3" -->
+* replace discontinued SES <!-- .element: class="fragment" data-fragment-index="4" -->
+* partner to provide rack-wise hardware/software stack <!-- .element: class="fragment" data-fragment-index="5" -->
+<div>
+     <img style="position: absolute; width:30%; right: 60%;" alt="Clyso"
+          data-src="images/CLYSO-Logo_black.svg" />
+</div> <!-- .element class="fragment" data-fragment-index="6"-->
 
