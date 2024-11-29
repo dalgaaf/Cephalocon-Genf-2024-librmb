@@ -15,18 +15,6 @@
 <!-- .slide: data-state="normal" id="findings-7" data-timing="20s" data-menu-title="Findings - Performance" -->
 ## Findings - Performance
 
-### CephFS Troubleshooting <!-- .element: class="fragment" data-fragment-index="0" -->
-* too low number of PGs by default <!-- .element: class="fragment" data-fragment-index="1" -->
-  * increased, no improvement <!-- .element: class="fragment" data-fragment-index="1" -->
-* MDS Cache sizes increased <!-- .element: class="fragment" data-fragment-index="2" -->
-  * no significant improvement! <!-- .element: class="fragment" data-fragment-index="2" -->
-* cephfs_metadata pool set from 6x to 3x <!-- .element: class="fragment" data-fragment-index="3" -->
-  * no significant improvement! <!-- .element: class="fragment" data-fragment-index="3" -->
-* Multi-MDS <!-- .element: class="fragment" data-fragment-index="4" -->
-  * dynamic balancer: caused unpredictable performance <!-- .element: class="fragment" data-fragment-index="5" -->
-  * subtree pinning: predictable performance <!-- .element: class="fragment" data-fragment-index="5" -->
-  * Multi-MDS per server required changes in SES automation: improved performance <!-- .element: class="fragment" data-fragment-index="5" -->
-
 
 <!-- .slide: data-state="normal" id="findings-7.1" data-timing="20s" data-menu-title="Findings - Performance - Multi-MDS" -->
 ## Findings - Performance Multi-MDS
@@ -138,29 +126,21 @@
   * Cluster with 100 OSDs, 40m emails <!-- .element: class="fragment" data-fragment-index="5" -->
     * failure of 1 OSD requires ~4m objects to be moved <!-- .element: class="fragment" data-fragment-index="5" -->
 
+* Solutions
+  * Move from HDD to SSD depending on TCO impact
+  * Implement another, more dense format to store emails
+
+Note: 
+- Base code on dbox like format ?
+  - impact due to EC rewrite performance 
+  - may add SSD pool to store boxes till full 
+  - when dbox full, write to HDD 
+  - if dbox not full, move after defined time to HDD 
+
 
 <!-- .slide: data-state="normal" id="findings-10" data-timing="20s" data-menu-title="Findings - Recovery Performance" -->
-## Findings - Recovery Performance
+## Findings - Cost
 
-### Alternatives
-* Move from HDD to SSD depending on TCO impact. <!-- .element: class="fragment" data-fragment-index="0" -->
-* Base code on dbox like format ? <!-- .element: class="fragment" data-fragment-index="1" -->
-  * impact due to EC rewrite performance <!-- .element: class="fragment" data-fragment-index="2" -->
-  * may add SSD pool to store boxes till full <!-- .element: class="fragment" data-fragment-index="3" -->
-    * when dbox full, write to HDD <!-- .element: class="fragment" data-fragment-index="3" -->
-    * if dbox not full, move after defined time to HDD <!-- .element: class="fragment" data-fragment-index="3" -->
-
-
-<!-- .slide: data-state="normal" id="findings-14" data-timing="20s" data-menu-title="Conclusion" -->
-## Learnings
-
-### The technical part works in general! <!-- .element: class="fragment" data-fragment-index="0" -->
-### Performance issues will be indentified and fixed! <!-- .element: class="fragment" data-fragment-index="1" -->
-
-### Project success depends on 3 components <!-- .element: class="fragment" data-fragment-index="2" -->
-* People <!-- .element: class="fragment" data-fragment-index="3" -->
-* People <!-- .element: class="fragment" data-fragment-index="4" -->
-* People <!-- .element: class="fragment" data-fragment-index="5" -->
-
-### You need motivated Dev/Ops! <!-- .element: class="fragment" data-fragment-index="6" -->
-
+### power consumptions
+### space / density
+### network
