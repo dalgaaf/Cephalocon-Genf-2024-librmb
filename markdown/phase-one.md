@@ -36,7 +36,7 @@
 ## Test scenarios
 
 * typical hardware related failures
-  * one/two MON/MDS nodes
+  * one/two MON/MDS instances and nodes
   * one OSD capacity node (email)
   * one OSD performance node (CephFS)
   * one OSD
@@ -66,17 +66,55 @@
 
 <!-- .slide: data-state="normal" id="phase-one-5" data-timing="20s" data-menu-title="PoC Phase One Testscases" -->
 ## Selected Testcases
+### 1FC + 2 OSDs down
+
+<center><img data-src="images/test_BA_2OSD.png" style="width:75%"></center>
+
+* noout flag set after power off
+* tuned backfill/recovery prozesses during recovery
+
+Note:
+* 165m objects, 4k PGs ~20% filled
+* power off:
+  * 6 OSD capacity nodes
+  * 3 OSD performance nodes
+  * 1 MON node (1x MON, 1xMGR)
+  * 1 MDS node (8x MDS)
+* take out:
+  * 1 OSD on perf node
+  * 1 OSD on capacity node
+* time line:
+  * blue line: read, red: write
+  * power off: 10:40, power on: 11:50, recovery complete: 2:15h
+  * OSDs out: 11:15 and 11:25, back: 10:40
+  * tuned: 12:01 (from 275 obj/s to 40k/s)
 
 
+<!-- .slide: data-state="normal" id="phase-one-6" data-timing="20s" data-menu-title="PoC Phase One Testscases" -->
+## Selected Testcases
+### Cluster full 
 
-<!-- .slide: data-state="normal" id="phase-one-6" data-timing="20s" data-menu-title="PoC Phase One Results" -->
+Procedure:
+* fillup would take a long time: reduce capacity, set 9 nodes as out
+* to avoid recovery: clean up rados_mail, would have taken ~24-26h, instead re-deloy nodes
+* fillup to 90% with test data, start tests to fill up to 100%
+* check cluster behaviour
+* add new OSD nodes to check behaviour
+
+Result:
+* affects clients
+* painful long recovery
+* prevent at all costs
+
+
+<!-- .slide: data-state="normal" id="phase-one-7" data-timing="20s" data-menu-title="PoC Phase One Results" -->
 ## Results
 
 * in total 22 major test scenarios
 
 * none failed
   * no unexpected behavior
-  * no major impact for customers
+  * no major unpreventable impact for customers
   * no data loss
 
 Note: cluster may unresponsive for short period of time, unlikely to be visible for customer (due to cashes and queues)

@@ -9,6 +9,7 @@
   * randomly selected
   * reflecting typical customer distribution
     * active and inactive mail accounts
+    * size
 
 * move accounts from NFS to Ceph
   * test account migration
@@ -17,6 +18,8 @@
   * learn from typical cluster tasks and behaviour
 * move accounts back to NFS after PoC
 
+Note: 
+* excluded accounts which have emails which exceed a defined size -> max rados object size
 
 <!-- .slide: data-state="normal" id="status-2" data-timing="20s" data-menu-title="PoC" -->
 ## Results

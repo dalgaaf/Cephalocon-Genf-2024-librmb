@@ -6,45 +6,37 @@
 ## DT's approach
 <div>
      <img style="position: absolute; width:30%; left: 63%;" alt="Partner"
-          data-src="images/partner_latest.png" />
+          data-src="images/partner_latest_2.png" />
 </div> <!-- .element class="fragment" data-fragment-index="4"-->
 
 * no open source solution on the market <!-- .element class="fragment" data-fragment-index="0"-->
 * closed source or licence no option <!-- .element class="fragment" data-fragment-index="1"-->
 * develop / sponsor a solution <!-- .element class="fragment" data-fragment-index="2"-->
 * open source it <!-- .element class="fragment" data-fragment-index="3"-->
-* partner with: <!-- .element class="fragment" data-fragment-index="4"-->
+* partner(ed) with: <!-- .element class="fragment" data-fragment-index="4"-->
   * `Tallence AG` for development <!-- .element class="fragment" data-fragment-index="4"-->
-  * `SUSE` for Ceph <!-- .element class="fragment" data-fragment-index="4"-->
+  * <del>`SUSE`</del> for Ceph <!-- .element class="fragment current-visibl" data-fragment-index="4"-->
+  * <del>`Wido den Hollander`</del> (42on.com)
 
 Note: 
 - Dovecot Pro licence no option due to TCO impact. Model is to pay per account if active or inactive. With 39m accounts it would break the BC.
-
-
-<!-- .slide: data-state="normal" id="librmb-DT-1" data-timing="20s" data-menu-title="Ceph Dovecot Plugin" -->
-## Ceph plugin for Dovecot
-### Hybrid approach <!-- .element class="fragment" data-fragment-index="0"-->
-
-### Emails <!-- .element class="fragment" data-fragment-index="1"-->
-* RADOS <!-- .element class="fragment" data-fragment-index="1"-->
-
-### Metadata and indexes <!-- .element class="fragment" data-fragment-index="2"-->
-* CephFS <!-- .element class="fragment" data-fragment-index="2"-->
-
-### Generic email abstraction on top of librados <!-- .element class="fragment" data-fragment-index="4"-->
-* Split code into libraries <!-- .element class="fragment" data-fragment-index="4"-->
-* Give code back to corresponding upstream projects <!-- .element class="fragment" data-fragment-index="4"-->
-
-Note: out of scope - user data and credential storage; full text search
+- partnered with SUSE till end of PoC, since Ceph product discontinued
 
 
 <!-- .slide: data-state="normal" id="librmb-DT-2.1" data-timing="20s" data-menu-title="librmb" -->
-## Librados mailbox (librmb)
+## Ceph plugin for Dovecot
+### Librados mailbox (librmb)
 
 <div>
      <img style="width:90%" alt="librmb architecture overview"
           data-src="images/dovecot-plugin-architecture-normal.svg" />
 </div>
+
+Note:
+* Hybrid approach: emails in RADOS, Metadata/indexes in CephFS
+* Generic email abstraction on top of librados
+* Split code into libraries, Give code back to corresponding upstream projects
+* out of scope: user data management and credential storage; full text search
 
 
 <!-- .slide: data-state="normal" id="librmb-DT-3" data-timing="20s" data-menu-title="librmb" -->
@@ -59,11 +51,9 @@ Note: out of scope - user data and credential storage; full text search
 
 ### <span>Language: `C++`</span> <!-- .element: class="fragment" data-fragment-index="1" -->
 
-### Supported Dovecot versions: <!-- .element: class="fragment" data-fragment-index="2" -->
-* 2.2 >= 2.2.21 <!-- .element: class="fragment" data-fragment-index="2" -->
-* 2.3 <!-- .element: class="fragment" data-fragment-index="2" -->
+### Current version: <!-- .element: class="fragment" data-fragment-index="2" -->
+* v1.0.0 <!-- .element: class="fragment" data-fragment-index="2" -->
+* since June 2023 <!-- .element: class="fragment" data-fragment-index="2" -->
 
 ### <span><a href="https://github.com/ceph-dovecot/">github.com/ceph-dovecot/</a></span> <!-- .element: class="fragment" data-fragment-index="3" -->
-
-### still under development <!-- .element: class="fragment" data-fragment-index="4" -->
 

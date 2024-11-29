@@ -12,7 +12,7 @@
   * 77% market share (openemailsurvey.org, 2020) <!-- .element class="fragment" data-fragment-index="2"-->
 * NAS with sharded NFS <!-- .element class="fragment" data-fragment-index="3"-->
 
-### Dimensions <!-- .element class="fragment" data-fragment-index="5"-->
+### Dimensions¹ <!-- .element class="fragment" data-fragment-index="5"-->
 * ~50.6 million accounts <!-- .element class="fragment" data-fragment-index="5"-->
 * ~2,25 petabyte net storage <!-- .element class="fragment" data-fragment-index="6"-->
 * ~42% usable raw space <!-- .element class="fragment" data-fragment-index="7"-->
@@ -22,6 +22,7 @@ Note:
 - NFS with multiple RAID arrays
 - emails are stored compressed
 - Accounts +45%, +73% storage, +116% emails since last presentation 3y ago
+- ¹) Numbers from End of 2022
 
 
 <!-- .slide: data-state="normal" id="store-emails" data-timing="20s" data-menu-title="How stored?" -->
