@@ -6,7 +6,7 @@
 ## Limitations
 
 * Updates but no upgrades of Ceph version
-  * SES with Nautilus
+  * SES with `Nautilus`
 
 * No hardware changes
 

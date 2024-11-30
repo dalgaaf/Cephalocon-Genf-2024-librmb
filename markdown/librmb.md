@@ -25,7 +25,6 @@ Note:
 
 <!-- .slide: data-state="normal" id="librmb-DT-2.1" data-timing="20s" data-menu-title="librmb" -->
 ## Ceph plugin for Dovecot
-### Librados mailbox (librmb)
 
 <div>
      <img style="width:90%" alt="librmb architecture overview"
@@ -43,7 +42,7 @@ Note:
 ## It's open source!
 
 <div>
-    <img style="position: absolute; width: 65%; left: 45%;" alt="Github Project Screenshot"
+    <img style="position: absolute; width: 55%; left: 45%;" alt="Github Project Screenshot"
          data-src="images/github-ceph-dovecot_new.png" />
 </div> <!-- .element: class="fragment" data-fragment-index="2" -->
 

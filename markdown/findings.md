@@ -2,7 +2,7 @@
 # Findings and Learnings
 
 
-<!-- .slide: data-state="normal" id="findings-1" data-timing="20s" data-menu-title="PoC" -->
+<!-- .slide: data-state="normal" id="findings-1" data-timing="20s" data-menu-title="Findings - MDS Load" -->
 ## MDS load distribution
 
 ### Issue: MDS performance low in default setup
@@ -22,7 +22,21 @@ Note:
 ¹ in nautilus
 
 
-<!-- .slide: data-state="normal" id="findings-2" data-timing="20s" data-menu-title="PoC" -->
+<!-- .slide: data-state="normal" id="findings-2" data-timing="20s" data-menu-title="Findings - Expunge" -->
+## Nightly dovecot jobs
+
+### Nightly expire/expunge jobs run too long
+
+* runs nightly to e.g. delete emails from trash older than x days
+* job generates load only on one MDS: bottleneck
+* caused by file system structure and MDS subtree pinning
+
+### Solution:
+* moved job related directories to separate CephFS
+* no subtree pinning on these MDS to distribute load
+
+
+<!-- .slide: data-state="normal" id="findings-3" data-timing="20s" data-menu-title="Findings - MDS Failover" -->
 ## MDS Failover
 
 ### Issue: MDS Failover slightly slow
@@ -39,7 +53,7 @@ Note:
   * switched back to cold-standby, more reliable
 
 
-<!-- .slide: data-state="normal" id="findings-3" data-timing="20s" data-menu-title="PoC" -->
+<!-- .slide: data-state="normal" id="findings-4" data-timing="20s" data-menu-title="Findings - Mailbox repair" -->
 ## Recover broken mailbox indexes
 
 ### Issue: Recovery takes long time and produces high load
@@ -59,15 +73,7 @@ Note:
 Note: https://github.com/ceph-dovecot/dovecot-ceph-plugin/issues/349
 
 
-<!-- .slide: data-state="normal" id="findings-4" data-timing="20s" data-menu-title="PoC" -->
-## Load at night 
-
-* caused by dovecot cleanup processes (expire job)
-
-TODO!!!
-
-
-<!-- .slide: data-state="normal" id="findings-5" data-timing="20s" data-menu-title="PoC" -->
+<!-- .slide: data-state="normal" id="findings-5" data-timing="20s" data-menu-title="Findings - Performance" -->
 ## Performance during initial import
 
 ### Issue: R/W performance low with increasing number of accounts
@@ -88,11 +94,49 @@ Note:
 * issue 594
 
 
-<!-- .slide: data-state="normal" id="findings-10" data-timing="20s" data-menu-title="Findings - Recovery Performance" -->
+<!-- .slide: data-state="normal" id="findings-10" data-timing="20s" data-menu-title="Findings - Cost" -->
 ## Findings - Cost
+### Issue 1: Power Consumption 
+### Issue 2: Space / Density
 
-TODO
+* both topics connected
+* power consumption per TB/account too high
+* PoC hardware is not up-to-date¹
+  * energy efficiency per TByte increased for HDDs and SSD/NVMe
 
-### power consumptions
-### space / density
-### network
+### Solution: update hardware concept
+* higher density (2U: 4.6-13x higher capacity)
+* higher efficiency CPUs
+* higher density requires higher network bandwith / cooling
+
+Note: 
+¹ from 2017/2019, 5-8y
+ * HDD 4 TB SAS 7.2k: 3W/TB
+ * SSD 1.6TB SAS: 5.4W/TB
+Currently available with HPE:
+ * HDD 20TB SAS 7.2k: 0.5W/TB, f. 6
+ * HDD 24TB SAS 7.2k: 0.39W/TB, f. 7.7
+ * HDD 24TB SATA 7.2k: 0.375W/TB, f. 8
+ * NVMe 15.36TB: 1W/TB, f. 5.4
+ * SSD 7.68TB SATA: 0.46W/TB, f. 11.7
+ * SSD 6.4TB SAS 12G: 1.5W/TB, f. 3.6
+Density: 2U DL345 w/ 24/34 SSDs/NVMe vs current: 4,6x/6,5 SSD | 13x NVMe Storage
+
+
+<!-- .slide: data-state="normal" id="findings-11" data-timing="20s" data-menu-title="Findings - Cost" -->
+## Findings - Cost
+### Issue 3: Network ports
+### Issue 4: Support
+
+* mainly driven by internal port costs
+* Current Ceph setup vs NAS/NFS : 264 vs 16 ports¹
+* Ceph 16.5 times higher port costs anually
+  * means: high 4-digits vs low 6-digits
+* SES canceled!
+
+### K2BW1S: Ceph storage appliance
+* only connecting ports count
+* support and may management part of the appliance costs
+
+Note:
+¹) internal ports of appliances/blackboxes not counted
