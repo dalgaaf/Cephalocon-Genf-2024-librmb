@@ -108,19 +108,10 @@ Note:
 * higher density (2U: 4.6-13x higher capacity)
 * higher efficiency CPUs
 * higher density requires higher network bandwith / cooling
+* may open options to use slightly more efficient EC 
 
-Note: 
-¹ from 2017/2019, 5-8y
- * HDD 4 TB SAS 7.2k: 3W/TB
- * SSD 1.6TB SAS: 5.4W/TB
-Currently available with HPE:
- * HDD 20TB SAS 7.2k: 0.5W/TB, f. 6
- * HDD 24TB SAS 7.2k: 0.39W/TB, f. 7.7
- * HDD 24TB SATA 7.2k: 0.375W/TB, f. 8
- * NVMe 15.36TB: 1W/TB, f. 5.4
- * SSD 7.68TB SATA: 0.46W/TB, f. 11.7
- * SSD 6.4TB SAS 12G: 1.5W/TB, f. 3.6
-Density: 2U DL345 w/ 24/34 SSDs/NVMe vs current: 4,6x/6,5 SSD | 13x NVMe Storage
+Note:
+* Density: 2U DL345 w/ 24/34 SSDs/NVMe vs current: 4,6x/6,5 SSD | 13x NVMe Storage
 
 
 <!-- .slide: data-state="normal" id="findings-11" data-timing="20s" data-menu-title="Findings - Cost" -->
@@ -190,6 +181,18 @@ Density: 2U DL345 w/ 24/34 SSDs/NVMe vs current: 4,6x/6,5 SSD | 13x NVMe Storage
 }
 -->
 </canvas>
+
+Note: 
+¹ from 2017/2019, 5-8y
+ * HDD 4 TB SAS 7.2k: 3W/TB
+ * SSD 1.6TB SAS: 5.4W/TB
+Currently available with HPE:
+ * HDD 20TB SAS 7.2k: 0.5W/TB, f. 6
+ * HDD 24TB SAS 7.2k: 0.39W/TB, f. 7.7
+ * HDD 24TB SATA 7.2k: 0.375W/TB, f. 8
+ * NVMe 15.36TB: 1W/TB, f. 5.4
+ * SSD 7.68TB SATA: 0.46W/TB, f. 11.7
+ * SSD 6.4TB SAS 12G: 1.5W/TB, f. 3.6
 
 
 <!-- .slide: data-state="normal" id="findings-12" data-timing="20s" data-menu-title="Findings - Cost" -->
