@@ -125,6 +125,75 @@ Density: 2U DL345 w/ 24/34 SSDs/NVMe vs current: 4,6x/6,5 SSD | 13x NVMe Storage
 
 <!-- .slide: data-state="normal" id="findings-11" data-timing="20s" data-menu-title="Findings - Cost" -->
 ## Findings - Cost
+### Storage device power consumption
+<canvas data-chart="bar">
+<!--
+{
+ "data" : {
+     "labels": ["HDD 4TB SAS", "SSD 1.6TB SAS", "" , "HDD 20TB SAS", "HDD 24TB SAS", "HDD 24TB SATA", "NVMe 15.36TB", "SSD 7.68TB SATA", "SSD 6.4TB SAS" ],
+     "datasets": [
+         {
+             "data": [3, 5.4, "" , 0.5, 0.39, 0.375, 1, 0.46, 1.5 ],
+             "backgroundColor": [
+                 "rgba(206, 22, 22, 0.45)",
+                 "rgba(206, 22, 22, 0.7)",
+                 "rgba(168, 222, 143, 0.8)",
+                 "rgba(168, 222, 143, 0.7)",
+                 "rgba(168, 222, 143, 0.8)",
+                 "rgba(168, 222, 143, 0.9)",
+                 "rgba(168, 222, 143, 0.5)",
+                 "rgba(168, 222, 143, 0.7)",
+                 "rgba(168, 222, 143, 0.3)"]
+         }
+     ]
+ },
+ "options": {
+     "animateScale": "true",
+     "responsive": "true",
+     "legend": {
+           "display": 0
+     },
+     "layout": {
+         "padding": {
+             "left": 0,
+             "right": 0,
+             "top": 10,
+             "bottom": 0
+         }
+     },
+     "plugins": {
+         "datalabels": {
+             "align": "end",
+             "anchor": "end"
+         }
+     },
+     "scales": {
+         "yAxes": [{
+             "gridLines": {
+                 "color": "rgba(0, 0, 0, 0)"
+             },
+             "scaleLabel": {
+                 "display": 1,
+                 "labelString": "W/TByte under load (source: HPE Quick Specs)"
+             },
+             "ticks": {
+                 "display": 0
+             }
+         }],
+         "xAxes": [{
+             "gridLines": {
+                 "color": "rgba(0, 0, 0, 0)"
+             }
+         }]
+    }
+ }
+}
+-->
+</canvas>
+
+
+<!-- .slide: data-state="normal" id="findings-12" data-timing="20s" data-menu-title="Findings - Cost" -->
+## Findings - Cost
 ### Issue 3: Network ports
 ### Issue 4: Support
 
