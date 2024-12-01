@@ -5,63 +5,66 @@
 <!-- .slide: data-state="normal" id="phase-one-1" data-timing="20s" data-menu-title="PoC Phase One Setup" -->
 ## Setup
 
-* physical setup as described before
-  * Rados on HDDs, CephFS on SSDs
-  * 3 MONs
-  * 24 MDS on 3 nodes
-    * 16 active
-    * 8 standby
+### physical setup as described before <!-- .element class="fragment" data-fragment-index="1"-->
+  * Rados on HDDs, CephFS on SSDs <!-- .element class="fragment" data-fragment-index="2"-->
+  * 3 MONs <!-- .element class="fragment" data-fragment-index="3"-->
+  * 24 MDS on 3 nodes <!-- .element class="fragment" data-fragment-index="4"-->
+    * 16 active <!-- .element class="fragment" data-fragment-index="4"-->
+    * 8 standby <!-- .element class="fragment" data-fragment-index="4"-->
 
-* load generation from 36 servers (heads) 
-  * running typical IMAP jobs for simulated customer accounts
-  * increasing number of accounts per head
-  * filling up the cluster
+### load generation from 36 servers (heads) <!-- .element class="fragment" data-fragment-index="5"-->
+  * running typical IMAP jobs for simulated customer accounts <!-- .element class="fragment" data-fragment-index="5"-->
+  * increasing number of accounts per head <!-- .element class="fragment" data-fragment-index="5"-->
+  * filling up the cluster <!-- .element class="fragment" data-fragment-index="5"-->
+
+Note: 
+* MDS: 16 active, 8 standby
 
 
 <!-- .slide: data-state="normal" id="phase-one-2" data-timing="20s" data-menu-title="PoC Phase One Focus" -->
 ## Focus
 
-* Performance
+### Performance <!-- .element class="fragment" data-fragment-index="1"-->
 
-* Data safety/loss
+### Data safety/loss <!-- .element class="fragment" data-fragment-index="2"-->
 
-* Processes
+### Processes <!-- .element class="fragment" data-fragment-index="3"-->
 
-* Impact on customers
-  * not every cluster issue will be visable to users
-  * identify severity 
+### Impact on customers <!-- .element class="fragment" data-fragment-index="4"-->
+  * not every cluster issue will be visable to users <!-- .element class="fragment" data-fragment-index="4"-->
+  * identify severity <!-- .element class="fragment" data-fragment-index="4"-->
 
 
 <!-- .slide: data-state="normal" id="phase-one-3" data-timing="20s" data-menu-title="PoC Phase One Tests 1" -->
 ## Test scenarios
 
-* typical hardware related failures
-  * one/two MON/MDS instances and nodes
-  * one OSD capacity node (email)
-  * one OSD performance node (CephFS)
-  * one OSD
-  * one fire compartment, +2 OSDs
+### typical server hardware related failures <!-- .element class="fragment" data-fragment-index="1"-->
+  * one/two MON/MDS instances and nodes <!-- .element class="fragment" data-fragment-index="2"-->
+  * one OSD capacity node (email) <!-- .element class="fragment" data-fragment-index="2"--> 
+  * one OSD performance node (CephFS) <!-- .element class="fragment" data-fragment-index="2"-->
+  * one OSD <!-- .element class="fragment" data-fragment-index="2"-->
+  * one fire compartment, +2 OSDs <!-- .element class="fragment" data-fragment-index="2"-->
 
-* typical network related failures
-  * frontend/backend network of an OSD node
-  * LACP check: disable 1-3 network ports of a node
+### typical network related failures <!-- .element class="fragment" data-fragment-index="3"-->
+  * frontend/backend network of an OSD node <!-- .element class="fragment" data-fragment-index="4"-->
+  * LACP check: disable 1-3 network ports of a node <!-- .element class="fragment" data-fragment-index="4"-->
 
 
 <!-- .slide: data-state="normal" id="phase-one-4" data-timing="20s" data-menu-title="PoC Phase One Tests 2" -->
 ## Test scenarios
 
-* admin scenarios
-  * removing/adding an OSD node
-  * ordered restart of the full Ceph Cluster
-  * update the network fabric switches under load
-  * update Ceph under load
-  * behavior of a completely filled cluster
+### admin scenarios <!-- .element class="fragment" data-fragment-index="1"-->
+* removing/adding an OSD node <!-- .element class="fragment" data-fragment-index="2"-->
+* ordered restart of the full Ceph Cluster <!-- .element class="fragment" data-fragment-index="2"-->
+* update the network fabric switches under load <!-- .element class="fragment" data-fragment-index="2"-->
+* update Ceph under load <!-- .element class="fragment" data-fragment-index="2"-->
+* behavior of a completely filled cluster <!-- .element class="fragment" data-fragment-index="2"-->
 
-* misc
-  * loosing time sync on a MON
-  * failure of SALT master
-  * restore admin node from backup/clone
-  * test performance parameter
+### misc <!-- .element class="fragment" data-fragment-index="3"-->
+* loosing time sync on a MON <!-- .element class="fragment" data-fragment-index="4"-->
+* failure of SALT master <!-- .element class="fragment" data-fragment-index="4"-->
+* restore admin node from backup/clone <!-- .element class="fragment" data-fragment-index="4"-->
+* test performance parameter <!-- .element class="fragment" data-fragment-index="4"-->
 
 
 <!-- .slide: data-state="normal" id="phase-one-5" data-timing="20s" data-menu-title="PoC Phase One Testscases" -->
@@ -94,17 +97,17 @@ Note:
 ## Selected Testcases
 ### Cluster full 
 
-Procedure:
-* fillup would take a long time: reduce capacity, set 9 nodes as out
-* to avoid recovery: clean up rados_mail, would have taken ~24-26h¹, instead re-deloy nodes
-* fillup to 90% with test data, start tests to fill up to 100%
-* check cluster behaviour
-* add new OSD nodes to check behaviour
+Procedure: <!-- .element class="fragment" data-fragment-index="1"-->
+* fillup would take a long time: reduce capacity, set 9 nodes as out <!-- .element class="fragment" data-fragment-index="2"-->
+* to avoid recovery: clean up rados_mail, would have taken ~24-26h¹, instead re-deloy nodes <!-- .element class="fragment" data-fragment-index="3"-->
+* fillup to 90% with test data, start tests to fill up to 100% <!-- .element class="fragment" data-fragment-index="4"-->
+* check cluster behaviour <!-- .element class="fragment" data-fragment-index="5"-->
+* add new OSD nodes to check behaviour <!-- .element class="fragment" data-fragment-index="6"-->
 
-Result:
-* affects clients
-* painful long recovery
-* prevent at all costs
+Result: <!-- .element class="fragment" data-fragment-index="7"-->
+* affects clients <!-- .element class="fragment" data-fragment-index="8"-->
+* painful long recovery <!-- .element class="fragment" data-fragment-index="8"-->
+* prevent at all costs <!-- .element class="fragment" data-fragment-index="8"-->
 
 Note:
 ¹ 100% load on RocksDB SSDs
@@ -127,15 +130,15 @@ Note:
 <!-- .slide: data-state="normal" id="phase-one-8" data-timing="20s" data-menu-title="PoC Phase One Testscases" -->
 ## Results
 
-* in total 22 major test scenarios
+### in total 22 major test scenarios <!-- .element class="fragment" data-fragment-index="1"-->
 
-* none failed
-  * no unexpected behavior
-  * no major unpreventable impact for customers
-  * no data loss
+### none failed <!-- .element class="fragment" data-fragment-index="2"-->
+  * no unexpected behavior <!-- .element class="fragment" data-fragment-index="3"-->
+  * no major unpreventable impact for customers <!-- .element class="fragment" data-fragment-index="3"-->
+  * no data loss <!-- .element class="fragment" data-fragment-index="3"-->
 
-* Compared to NFS
-  * expected behaviour
-  * comparable performance to HDD based NFS
+### Compared to NFS <!-- .element class="fragment" data-fragment-index="4"-->
+  * expected behaviour <!-- .element class="fragment" data-fragment-index="5"-->
+  * comparable performance to HDD based NFS <!-- .element class="fragment" data-fragment-index="5"-->
 
 Note: cluster may unresponsive for short period of time, unlikely to be visible for customer (due to cashes and queues)
