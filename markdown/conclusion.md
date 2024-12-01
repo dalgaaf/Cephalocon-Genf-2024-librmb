@@ -16,6 +16,7 @@
   * storage appliance per rack <!-- .element: class="fragment" data-fragment-index="5" -->
   * up-to-date Ceph version <!-- .element: class="fragment" data-fragment-index="5" -->
   * support for Ceph <!-- .element: class="fragment" data-fragment-index="5" -->
+  * plugin optimization <!-- .element: class="fragment" data-fragment-index="5" -->
 <div>
      <img style="position: absolute; width:30%; left: 50%; margin: -130px 50px" alt="Clyso"
           data-src="images/CLYSO-Logo_black.svg" />
