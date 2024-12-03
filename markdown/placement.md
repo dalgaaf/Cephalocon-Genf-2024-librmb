@@ -24,7 +24,6 @@ Note:
 * <!-- .element: class="fragment" data-fragment-index="0" --> Lost of customer data <b>MUST</b> be prevented at any cost
 * At least replica 3 or comparable <!-- .element: class="fragment" data-fragment-index="1" -->
 * <!-- .element: class="fragment" data-fragment-index="2" --> Cluster <b>MUST</b> be fully operational (R/W) in any scenario
-* Applies to CephFS and Rados part <!-- .element: class="fragment" data-fragment-index="3" -->
 
 ### <!-- .element: class="fragment" data-fragment-index="4" --> Failure scenarios to be covered: 
 * <!-- .element: class="fragment" data-fragment-index="5" --> 1 of 3 fire compartments (FCs)
@@ -33,6 +32,7 @@ Note:
 * <!-- .element: class="fragment" data-fragment-index="6" --> Additonal failure <b>MUST</b> not cause data loss
 
 Note: 
+- requirements: apply to whole cluster, Rados and CephFS
 - additional error sets cluster in hold, no writes to the cluster any more, cause stop of mail system.
 - max. failure scenario would be 4 independet errors before cluster stops to be responsive, even then no data loss.
 
@@ -54,6 +54,7 @@ Note:
 
 Note:
 - Rados settings: comparable regarding chunks written, PoC less overhead
+- Rados: comparabel usable space to NAS/NFS
 - CephFS settings same for both
 - Ceph: In case of max error OPS need to inervene to ensure max_size=k+1 handling.
 

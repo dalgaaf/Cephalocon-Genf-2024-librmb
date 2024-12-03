@@ -7,10 +7,8 @@
 
 ### physical setup as described before <!-- .element class="fragment" data-fragment-index="1"-->
   * Rados on HDDs, CephFS on SSDs <!-- .element class="fragment" data-fragment-index="2"-->
-  * 3 MONs <!-- .element class="fragment" data-fragment-index="3"-->
-  * 24 MDS on 3 nodes <!-- .element class="fragment" data-fragment-index="4"-->
-    * 16 active <!-- .element class="fragment" data-fragment-index="4"-->
-    * 8 standby <!-- .element class="fragment" data-fragment-index="4"-->
+  * 3 MONs / MGR <!-- .element class="fragment" data-fragment-index="3"-->
+  * 3 MDS nodes <!-- .element class="fragment" data-fragment-index="4"-->
 
 ### load generation from 36 servers (heads) <!-- .element class="fragment" data-fragment-index="5"-->
   * running typical IMAP jobs for simulated customer accounts <!-- .element class="fragment" data-fragment-index="5"-->
@@ -18,7 +16,7 @@
   * filling up the cluster <!-- .element class="fragment" data-fragment-index="5"-->
 
 Note: 
-* MDS: 16 active, 8 standby
+* MDS: 16 active, 8 standby, bad distribution since not div-by-3
 
 
 <!-- .slide: data-state="normal" id="phase-one-2" data-timing="20s" data-menu-title="PoC Phase One Focus" -->
@@ -97,14 +95,14 @@ Note:
 ## Selected Testcases
 ### Cluster full 
 
-Procedure: <!-- .element class="fragment" data-fragment-index="1"-->
+### Procedure: <!-- .element class="fragment" data-fragment-index="1"-->
 * fillup would take a long time: reduce capacity, set 9 nodes as out <!-- .element class="fragment" data-fragment-index="2"-->
-* to avoid recovery: clean up rados_mail, would have taken ~24-26h¹, instead re-deloy nodes <!-- .element class="fragment" data-fragment-index="3"-->
+* to avoid recovery: clean up,  would have taken ~24-26h¹, instead re-deploy nodes <!-- .element class="fragment" data-fragment-index="3"-->
 * fillup to 90% with test data, start tests to fill up to 100% <!-- .element class="fragment" data-fragment-index="4"-->
 * check cluster behaviour <!-- .element class="fragment" data-fragment-index="5"-->
 * add new OSD nodes to check behaviour <!-- .element class="fragment" data-fragment-index="6"-->
 
-Result: <!-- .element class="fragment" data-fragment-index="7"-->
+### Result: <!-- .element class="fragment" data-fragment-index="7"-->
 * affects clients <!-- .element class="fragment" data-fragment-index="8"-->
 * painful long recovery <!-- .element class="fragment" data-fragment-index="8"-->
 * prevent at all costs <!-- .element class="fragment" data-fragment-index="8"-->

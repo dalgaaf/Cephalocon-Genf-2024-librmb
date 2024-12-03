@@ -14,12 +14,14 @@
 
 ### Solution: <!-- .element class="fragment" data-fragment-index="4"-->
   * multiple MDS per hardware node (8) <!-- .element class="fragment" data-fragment-index="5"-->
+    * 16 active / 8 stand-by
   * dynamic balancer wasn't reliable in the cluster¹ <!-- .element class="fragment" data-fragment-index="5"-->
   * used subtree pinning instead <!-- .element class="fragment" data-fragment-index="5"-->
 
 Note: 
 * single threaded: MDS nodes under-utilized
 ¹ in nautilus
+* MDS: 16 active, 8 standby, bad distribution since not div-by-3
 
 
 <!-- .slide: data-state="normal" id="findings-2" data-timing="20s" data-menu-title="Findings - Expunge" -->

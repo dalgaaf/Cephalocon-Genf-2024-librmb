@@ -5,16 +5,16 @@
 <!-- .slide: data-state="normal" id="status-1" data-timing="20s" data-menu-title="PoC" -->
 ## Limitations
 
-### Updates but no upgrades of Ceph version
-  * SES with `Nautilus`
+### Updates but no upgrades of Ceph version <!-- .element: class="fragment" data-fragment-index="1" -->
+* <!-- .element: class="fragment" data-fragment-index="1" --> SES with <b>Nautilus</b>
 
-### No hardware changes
+### No hardware changes <!-- .element: class="fragment" data-fragment-index="2" -->
 
-### No placement changes
-  * hardware
-  * erasure coding
+### No placement changes <!-- .element: class="fragment" data-fragment-index="3" -->
+* hardware <!-- .element: class="fragment" data-fragment-index="3" -->
+* erasure coding <!-- .element: class="fragment" data-fragment-index="3" -->
 
-### No changes of deployment and automation
+### No changes of deployment and automation <!-- .element: class="fragment" data-fragment-index="4" -->
 
 Note: we are aware of the limitiations caused by SUSE Product decisions (cancel SES), 
       and changes in deployment methodes, tried to minimize impact on the PoC even if this

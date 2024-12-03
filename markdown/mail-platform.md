@@ -15,7 +15,7 @@
 ### Dimensions¹ <!-- .element class="fragment" data-fragment-index="5"-->
 * ~50.6 million accounts <!-- .element class="fragment" data-fragment-index="5"-->
 * ~14.5 billion emails <!-- .element class="fragment" data-fragment-index="5"-->
-* ~2,25 petabyte net storage <!-- .element class="fragment" data-fragment-index="6"-->
+* ~2,25 PByte net storage <!-- .element class="fragment" data-fragment-index="6"-->
 * ~42% usable raw space <!-- .element class="fragment" data-fragment-index="6"-->
 
 Note:

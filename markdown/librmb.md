@@ -13,10 +13,11 @@
 * closed source or licence no option <!-- .element class="fragment" data-fragment-index="1"-->
 * develop / sponsor a solution <!-- .element class="fragment" data-fragment-index="2"-->
 * open source it <!-- .element class="fragment" data-fragment-index="3"-->
-* partner(ed) with: <!-- .element class="fragment" data-fragment-index="4"-->
-  * `Tallence AG` for development <!-- .element class="fragment" data-fragment-index="4"-->
-  * <del>`SUSE`</del> for Ceph <!-- .element class="fragment current-visibl" data-fragment-index="4"-->
-  * <del>`Wido den Hollander`</del> (42on.com)
+* started 2016/2017 <!-- .element class="fragment" data-fragment-index="4"-->
+* partner(ed) with: <!-- .element class="fragment" data-fragment-index="5"-->
+  * `Tallence AG` for development <!-- .element class="fragment" data-fragment-index="5"-->
+  * <del>`SUSE`</del> for Ceph <!-- .element class="fragment current-visibl" data-fragment-index="5"-->
+  * <del>`Wido den Hollander`</del> (42on.com) <!-- .element class="fragment current-visibl" data-fragment-index="5"-->
 
 Note: 
 - Dovecot Pro licence no option due to TCO impact. Model is to pay per account if active or inactive. With 39m accounts it would break the BC.
