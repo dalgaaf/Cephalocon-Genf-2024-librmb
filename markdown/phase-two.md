@@ -30,7 +30,7 @@ Note:
   * ~440 million emails <!-- .element class="fragment" data-fragment-index="2"-->
   * ~4 billion EC chunks <!-- .element class="fragment" data-fragment-index="2"-->
   * 434 TByte use capacity from Dovecot view <!-- .element class="fragment" data-fragment-index="2"-->
-  * 370 TiB raw used capacity from Ceph view <!-- .element class="fragment" data-fragment-index="2"-->
+  * 406 TByte raw used capacity from Ceph view <!-- .element class="fragment" data-fragment-index="2"-->
   * CephFS Cluster: 25 TiB used <!-- .element class="fragment" data-fragment-index="2"-->
 
 ### successfull! <!-- .element class="fragment" data-fragment-index="3"-->
