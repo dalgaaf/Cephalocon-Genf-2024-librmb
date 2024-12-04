@@ -17,7 +17,7 @@
 * partner(ed) with: <!-- .element class="fragment" data-fragment-index="5"-->
   * `Tallence AG` for development <!-- .element class="fragment" data-fragment-index="5"-->
   * <del>`SUSE`</del> for Ceph <!-- .element class="fragment current-visibl" data-fragment-index="5"-->
-  * <del>`Wido den Hollander`</del> (42on.com) <!-- .element class="fragment current-visibl" data-fragment-index="5"-->
+  * `Wido den Hollander` <!-- .element class="fragment current-visibl" data-fragment-index="5"-->
 
 Note: 
 - Dovecot Pro licence no option due to TCO impact. Model is to pay per account if active or inactive. With 39m accounts it would break the BC.
@@ -33,7 +33,7 @@ Note:
 </div>
 
 Note:
-* Hybrid approach: emails in RADOS, Metadata/indexes in CephFS
+* Hybrid approach: emails in RADOS+xattr (OMAP) for immutable attributes, Metadata/indexes in CephFS
 * Generic email abstraction on top of librados
 * Split code into libraries, Give code back to corresponding upstream projects
 * out of scope: user data management and credential storage; full text search

@@ -60,7 +60,7 @@ Note:
 
 ### Issue: Recovery takes long time and produces high load <!-- .element class="fragment" data-fragment-index="1"-->
 
-* lost or broken indexes require search trough the full namespaces <!-- .element class="fragment" data-fragment-index="2"-->
+* lost or broken indexes require search trough the full namespace <!-- .element class="fragment" data-fragment-index="2"-->
 * listing all objects takes a very long time on Rados <!-- .element class="fragment" data-fragment-index="3"-->
   * not done in parallel <!-- .element class="fragment" data-fragment-index="4"-->
   * large number of objects <!-- .element class="fragment" data-fragment-index="4"-->
@@ -72,7 +72,10 @@ Note:
   * add additional index for mail oids per UUID <!-- .element class="fragment" data-fragment-index="7"-->
   * use as input for the repair <!-- .element class="fragment" data-fragment-index="7"-->
 
-Note: https://github.com/ceph-dovecot/dovecot-ceph-plugin/issues/349
+Note:
+* broken index cause missing connection  between user and emails
+* listing all objects to check for their xattr
+* https://github.com/ceph-dovecot/dovecot-ceph-plugin/issues/349
 
 
 <!-- .slide: data-state="normal" id="findings-5" data-timing="20s" data-menu-title="Findings - Performance" -->
@@ -108,7 +111,7 @@ Note:
 
 ### Solution: update hardware concept <!-- .element class="fragment" data-fragment-index="5"-->
 * higher density (2U: 4.6-13x higher capacity) <!-- .element class="fragment" data-fragment-index="6"-->
-* higher efficiency CPUs <!-- .element class="fragment" data-fragment-index="6"-->
+* CPUs w/ higher efficiency <!-- .element class="fragment" data-fragment-index="6"-->
 * higher density requires higher network bandwith / cooling <!-- .element class="fragment" data-fragment-index="6"-->
 * may open options to use slightly more efficient EC <!-- .element class="fragment" data-fragment-index="6"-->
 

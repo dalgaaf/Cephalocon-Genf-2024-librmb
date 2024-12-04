@@ -31,7 +31,7 @@ Note:
   * ~4 billion EC chunks <!-- .element class="fragment" data-fragment-index="2"-->
   * 434 TByte use capacity from Dovecot view <!-- .element class="fragment" data-fragment-index="2"-->
   * 406 TByte raw used capacity from Ceph view <!-- .element class="fragment" data-fragment-index="2"-->
-  * CephFS Cluster: 25 TiB used <!-- .element class="fragment" data-fragment-index="2"-->
+  * CephFS Cluster: 27.5 TByte used <!-- .element class="fragment" data-fragment-index="2"-->
 
 ### successfull! <!-- .element class="fragment" data-fragment-index="3"-->
   * no customer impact <!-- .element class="fragment" data-fragment-index="4"-->

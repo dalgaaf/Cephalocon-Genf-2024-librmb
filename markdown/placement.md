@@ -42,6 +42,7 @@ Note:
 
 ### Rados <!-- .element: class="fragment" data-fragment-index="0" -->
 * k4m5 <!-- .element: class="fragment" data-fragment-index="0" -->
+* EC overhead for very small objects <!-- .element: class="fragment" data-fragment-index="0" -->
 
 ### CephFS <!-- .element: class="fragment" data-fragment-index="1" -->
 * data: 6x replication <!-- .element: class="fragment" data-fragment-index="1" -->
