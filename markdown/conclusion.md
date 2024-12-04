@@ -15,6 +15,7 @@
   * Tiering could be done on Dovecot level <!-- .element: class="fragment" data-fragment-index="3" -->
 * faster network (100G), decrease port numbers <!-- .element: class="fragment" data-fragment-index="4" -->
 * optimize EC settings, especially for small objects <!-- .element: class="fragment" data-fragment-index="6" -->
+* snapshots <!-- .element: class="fragment" data-fragment-index="7" -->
 
 Note:
 
